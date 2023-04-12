@@ -1,0 +1,1726 @@
+{
+  "collapsibleTwo": {
+    "title": "VR Arena MIKS",
+    "titleForSummary": "Аренда VR Arena MIKS",
+    "image": "/images/Rectangle 1192.jpg",
+    "dateAndTime": "выберите дату и время",
+    "prices": "Понедельник – пятница до 18:00 – **12 000 руб.**\n\nПонедельник – четверг после 18:00 – **14 000 руб.**\n\nПятница (после 18:00) – воскресенье, праздничные и предпраздничные дни – **18 000 руб.**\n\nМинимальное время аренды – **60 минут**",
+    "price": {
+      "mondayToFriday": "12000",
+      "mondayToThursday": "14000",
+      "fridayToSunday": "18000",
+      "minTime": "1",
+      "workUntil": 22
+    },
+    "subText": "Условия и продолжительность игры:\n\n1 игра - 40 мин\n\n2 игры по 15 мин\n\nДопускается не более 10 участников на площадке"
+  },
+  "headingOne": "Конфигуратор мероприятий",
+  "checkout": {
+    "heading": "Спасибо, что выбрали MIKS KARTING!",
+    "success": {
+      "heading": "Письмо отправлено",
+      "text": "Скоро на указанную вами почту придет предварительный просчет стоимости.\nНаш менеджер свяжется с вами для уточнения деталей заказа.",
+      "button": "Ок"
+    },
+    "phonePlaceholder": "Ваш номер телефона",
+    "namePlaceholder": "Ваше ФИО",
+    "personalData": {
+      "text": "Я согласен с",
+      "linkText": "политикой обработки персональных данных",
+      "link": "https://miks-kart.ru/privacy-policy/"
+    },
+    "text": "Остался полседний шаг!\nЗаполните пустые поля, чтобы мы могли с вами связаться:",
+    "pdfMsg": "Полная смета будет отправлена вам на почту в виде .pdf-файла",
+    "button": "Отправить заказ",
+    "msgPlaceholder": "Ваш заказ:",
+    "errorText": "Ошибка!",
+    "emailPlaceholder": "Ваш E-mail"
+  },
+  "background": {
+    "desktop": "/images/image 2.png",
+    "mobile": "/images/image 2mob.png"
+  },
+  "admin": {
+    "totalSummOne": "итоговая сумма",
+    "headingOne": "Конфигуратор мероприятий",
+    "subHeadingOne": "панель администратора",
+    "sentText": "Смета отправлена на вашу почту и почту клиента",
+    "totalSummTwo": " с учетом скидок:",
+    "sale": "Укажите размер скидки на услуги",
+    "sendAdmin": "Отправка заказа",
+    "namePlaceholder": "ФИО клиента",
+    "sendAdminText": "Заполните поля ниже для отправки финальной сметы клиенту",
+    "msgPlaceholderConf": "Заказ с учетом скидок",
+    "emailPlaceholder": "E-mail клиента",
+    "sent": "Заказ отправлен",
+    "textOne": "Пожалуйста сверьте присланнный клиентом заказ. При необходимости скорректируйте дату и время аренды, выбранные опции и их количество.\n\nНиже, в каждом из разделов, после договоренности с клиентом, вы можете указать размер скидки.\n\nСтоимость аренды залов вбивается вручную, если есть такая необходимость.",
+    "formDisclaimer": "Полная смета будет отправлена на почту клиента в виде .pdf-файла:"
+  },
+  "collapsibleThree": {
+    "breadTitle": "Пицца и хлеб",
+    "fishTitle": "Горячие блюда из рыбы",
+    "beerBottleTitle": "Пиво бутылочное",
+    "desertTitle": "Десерт",
+    "snacks": [
+      {
+        "item": {
+          "image": "/images/Rectangle 278.jpg",
+          "heading": "Кесадилья куриная",
+          "text": "220/60/5 гр.\n\nКлассическая кесадилья с курицей, подается со сметаной и ",
+          "amountText": "Количество",
+          "price": "420"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 282.jpg",
+          "heading": "Кесадилья овощная",
+          "text": "220/60/5 гр.\n\nОбжаренная тортилья, овощи, сыр",
+          "amountText": "Количество",
+          "price": "350"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 279.jpg",
+          "heading": "Наггетсы",
+          "text": "125 гр.\n\nКлассические куриные наггетсы",
+          "amountText": "Количество",
+          "price": "320"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 283.jpg",
+          "heading": "Куриные крылья барбекю",
+          "text": "250/50/30 гр.\n\nКоллерованные крылья на ваш выбор с перцем Чили или без него",
+          "amountText": "Количество",
+          "price": "320"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 281.jpg",
+          "heading": "Свиные ребра барбекю",
+          "text": "250/40 гр.\n\nНе жирные ребрышки на гриле с соусом барбекю",
+          "amountText": "Количество",
+          "price": "400"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 284.jpg",
+          "heading": "Шашлычок из курицы",
+          "text": "120 гр.\n\nШашлычок из охлажденного куриного филе",
+          "amountText": "Количество",
+          "price": "370"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 280.jpg",
+          "heading": "Шашлычок из свинины",
+          "text": "130 гр.\n\nШашлычок из охлажденной свиной шейки",
+          "amountText": "Количество",
+          "price": "370"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 285.jpg",
+          "heading": "Шашлычок из семги",
+          "text": "130 гр.\n\nШашлычок из филе семги с Фарерских островов",
+          "amountText": "Количество",
+          "price": "450"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 294.jpg",
+          "heading": "Шашлычок из овощей",
+          "text": "130 гр.\n\nЦукини, баклажан, сладкий перец, шампиньон, помидор черри",
+          "amountText": "Количество",
+          "price": "350"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 297.jpg",
+          "heading": "Тигровые креветки с брускетами",
+          "text": "150/50/30 гр.",
+          "amountText": "Количество",
+          "price": "600"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 296.jpg",
+          "heading": "На троих, большая тарелка закусок к пиву",
+          "text": "700 гр.",
+          "amountText": "Количество",
+          "price": "750"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 298.jpg",
+          "heading": "Сырные палочки",
+          "text": "150/50 гр.\n\nСырные палочки из сливочной Гауды",
+          "amountText": "Количество",
+          "price": "400"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 295.jpg",
+          "heading": "Чесночные гренки",
+          "text": "125/50 гр.\n\nИз бородинского хлеба с чесночным маслом",
+          "amountText": "Количество",
+          "price": "220"
+        }
+      }
+    ],
+    "barTitle": "Барные закуски",
+    "menuSubitle": "заказ от 10 шт.",
+    "saladsTitle": "салаты и холодные закуски",
+    "beerTitle": "Пиво разливное",
+    "teaTitle": "Чай, кофе",
+    "pastaTitle": "паста",
+    "meat": [
+      {
+        "item": {
+          "image": "/images/Rectangle 312.jpg",
+          "heading": "Стейк Форза",
+          "text": "170/50 гр.\n\nСтейк из охлажденной говяжей вырезки с прожаркой на ваш выбор",
+          "amountText": "Количество",
+          "price": "980"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 316.jpg",
+          "heading": "Стейк из филе индейки",
+          "text": "160/30 гр.",
+          "amountText": "Количество",
+          "price": "490"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 313.jpg",
+          "heading": "Корейка ягненка",
+          "text": "300/50 гр.\n\nКорейка ягненка из Новой Зеландии",
+          "amountText": "Количество",
+          "price": "950"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/gray.svg",
+          "heading": "Свиная корейка",
+          "text": "180/50 гр.\n\nКорейка на костачке",
+          "amountText": "Количество",
+          "price": "490"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 315.jpg",
+          "heading": "Целая баранья нога с соусом Деми глас",
+          "text": "1 шт.",
+          "amountText": "Количество",
+          "price": "5900"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 318.jpg",
+          "heading": "Утиная ножка Конфи",
+          "text": "150/50 гр.\n\nУтиная ножка в мешочке с карамелизованным яблоком",
+          "amountText": "Количество",
+          "price": "580"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 314.jpg",
+          "heading": "Куриная грудка с соусом Песто",
+          "text": "170/30 гр.\n\nНежное и сочное куриное филе запеченое с травами и соусом Песто",
+          "amountText": "Количество",
+          "price": "480"
+        }
+      }
+    ],
+    "text": "Обслуживание +10% от общей стоимости заказа.\n\nСтоимость аренды зала ресторана обсуждается с менеджером после формирования заказа.",
+    "meatTitle": "Горячие блюда из мяса и птицы",
+    "pasta": [
+      {
+        "item": {
+          "image": "/images/gray.svg",
+          "heading": "Карбонара",
+          "text": "320 гр.",
+          "amountText": "Количество",
+          "price": "480"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 256.jpg",
+          "heading": "Фетучине с семгой",
+          "text": "350 гр.",
+          "amountText": "Количество",
+          "price": "480"
+        }
+      }
+    ],
+    "tea": [
+      {
+        "item": {
+          "image": "/images/Rectangle 437.jpg",
+          "heading": "Чай в асс. (чайник)",
+          "text": "400 мл.",
+          "amountText": "Количество",
+          "max": "",
+          "from": "false",
+          "stretch": "false",
+          "price": "290"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 438.jpg",
+          "heading": "Эспрессо",
+          "text": "50 мл.",
+          "amountText": "Количество",
+          "max": "",
+          "from": "false",
+          "stretch": "false",
+          "price": "150"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 438.jpg",
+          "heading": "Двойной Эспрессо",
+          "text": "90 мл.",
+          "amountText": "Количество",
+          "max": "",
+          "from": "false",
+          "stretch": "false",
+          "price": "200"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 438.jpg",
+          "heading": "Американо",
+          "text": "90 мл.",
+          "amountText": "Количество",
+          "max": "",
+          "from": "false",
+          "stretch": "false",
+          "price": "180"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 438.jpg",
+          "heading": "Капучино",
+          "text": "120 мл.",
+          "amountText": "Количество",
+          "max": "",
+          "from": "false",
+          "stretch": "false",
+          "price": "250"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 438.jpg",
+          "heading": "Латте",
+          "text": "200 мл.",
+          "amountText": "Количество",
+          "max": "",
+          "from": "false",
+          "stretch": "false",
+          "price": "250"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 438.jpg",
+          "heading": "Гляссе",
+          "text": "200 мл.",
+          "amountText": "Количество",
+          "max": "",
+          "from": "false",
+          "stretch": "false",
+          "price": "280"
+        }
+      }
+    ],
+    "beer": [
+      {
+        "item": {
+          "image": "/images/Rectangle 4372.jpg",
+          "heading": "Stella Artois\nCветлый лагер",
+          "text": "0,5 л.",
+          "amountText": "Количество",
+          "price": "350"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 425.jpg",
+          "heading": "Stella Artois\nCветлый лагер",
+          "text": "0.3 л.",
+          "amountText": "Количество",
+          "price": "270"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 426.jpg",
+          "heading": "Abbe Brune\nТемный эль",
+          "text": "0,5 л.",
+          "amountText": "Количество",
+          "price": "370"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 426.jpg",
+          "heading": "Abbe Brune\nТемный эль",
+          "text": "0.3 л.",
+          "amountText": "Количество",
+          "price": "300"
+        }
+      }
+    ],
+    "extrasOpt": [
+      {
+        "item": {
+          "image": "/images/Rectangle 453.jpg",
+          "heading": "Ведущий",
+          "text": "До 4-х часов работы",
+          "price": "25000"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 454.jpg",
+          "heading": "DJ",
+          "text": "До 5-и часов работы",
+          "price": "20000"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 457.jpg",
+          "heading": "Звукорежиссер караоке",
+          "text": "До 5-и часов работы",
+          "price": "10000"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 459.jpg",
+          "heading": "Аренда оборудования без персонала",
+          "text": "В стоимость входит работа звукорежиссера",
+          "price": "15000"
+        }
+      }
+    ],
+    "sandwitches": [
+      {
+        "item": {
+          "image": "/images/Rectangle 262.jpg",
+          "heading": "Ролл \"Цезарь\"с курицей на грилле",
+          "text": "250/100/50 гр.\n\nВ тортилью заворачиваем куриное филе,салат,овощи с соусом Цезарь и на гриль",
+          "amountText": "Количество",
+          "price": "460"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 266.jpg",
+          "heading": "Клаб сендвич",
+          "text": "360/100/50 гр.\n\nКлассический Клаб сендвич ",
+          "amountText": "Количество",
+          "price": "550"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 263.jpg",
+          "heading": "Сэндвич с ветчиной",
+          "text": "160 гр.\n\nТостовый хлеб,сыр,ветчина,соленый огурчик и оригинльный соус",
+          "amountText": "Количество",
+          "price": "290"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 267.jpg",
+          "heading": "Сэндвич с семгой",
+          "text": "160 гр.\n\nТостовый хлеб,слабосоленая семга,помидор,салат и соус Чили лайм",
+          "amountText": "Количество",
+          "price": "320"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 265.jpg",
+          "heading": "Бургер Black Angus",
+          "text": "380/80/50 гр.\n\nБургер из мраморной говядины с сыром и овощами на черных булочках",
+          "amountText": "Количество",
+          "price": "690"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 268.jpg",
+          "heading": "Бургер от Шефа с куриным филе на гриле",
+          "text": "360/80/50 гр.\n\nКуриное филе на гриле, салат, овощи и сыр",
+          "amountText": "Количество",
+          "price": "520"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 264.jpg",
+          "heading": "Чизбургер",
+          "text": "360/80/50 гр.\n\nс котлетой из рубленной говядины,сыром Чедер\n\nПодается  с картофелем фри",
+          "amountText": "Количество",
+          "price": "490"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 269.jpg",
+          "heading": "Мини бургер с рубленой говядиной",
+          "text": "260/80/50 гр.\n\nИз отборной рубленой говядины с оригинальным соусом,на мини булочках",
+          "amountText": "Количество",
+          "price": "420"
+        }
+      }
+    ],
+    "hallSubtitle": "Стоимость аренды зала ресторана обсуждается с менеджером после формирования заказа.",
+    "salads": [
+      {
+        "item": {
+          "image": "/images/Rectangle 173.jpg",
+          "heading": "Цезарь с куриным филе",
+          "text": "250 гр.\n\nМикс салатов,куриное филе на гриле,соус цезарь,гренки и пармезан.",
+          "amountText": "Количество",
+          "price": "480"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 175.jpg",
+          "heading": "Цезарь с королевскими креветками",
+          "text": "250 гр.\n\nКлассический цезарь,подается с обжаренными креветками.",
+          "amountText": "Количество",
+          "price": "620"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 177.jpg",
+          "heading": "Австрийский сырный салат",
+          "text": "215 гр.\n\nСырный салат из дор-блю,гауды и пармезана.С помидорами и ветчиной с оригинальным соусом.",
+          "amountText": "Количество",
+          "price": "500"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 178.jpg",
+          "heading": "Нисуаз Норвежский",
+          "text": "210 гр.\n\nКлассический Нисуаз со слабосоленым лососем, картофелем Креоле обжаренным на гриле",
+          "amountText": "Количество",
+          "price": "520"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 181.jpg",
+          "heading": "Авокадо де Сальмон",
+          "text": "240 гр.",
+          "amountText": "Количество",
+          "price": "530"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 182.jpg",
+          "heading": "Салат из индейки с сыром Дор Блю",
+          "text": "190 гр.\n\nФиле индейки на гриле, микс салатов, Дор блю, курага, орехи, апельсиновый соус",
+          "amountText": "Количество",
+          "price": "450"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 186.jpg",
+          "heading": "Салат Греческий",
+          "text": "270 гр.\n\nСалат из свежих овощей с брынзой и таджасскими оливками",
+          "amountText": "Количество",
+          "price": "470"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 191.jpg",
+          "heading": "Чоризо-бекон",
+          "text": "230 гр.",
+          "amountText": "Количество",
+          "price": "500"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 192.jpg",
+          "heading": "Сет брускет",
+          "text": "50/50/50 гр.\n\nТар-тар из лосося с сыром филадельфия, жульен из белых грибов, мусс из индейки с авокадо, хумус с луком пай",
+          "amountText": "Количество",
+          "price": "490"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 195.jpg",
+          "heading": "Салат «Оливье» (с курицей)",
+          "text": "150 гр.\n\nКлассический Оливье",
+          "amountText": "Количество",
+          "price": "480"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 196.jpg",
+          "heading": "Оливье со слабосоленой семгой",
+          "text": "170 гр.\n\nПодается с раковыми шейками",
+          "amountText": "Количество",
+          "price": "500"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 199.jpg",
+          "heading": "Салат с тунцом",
+          "text": "230 гр.",
+          "amountText": "Количество",
+          "price": "480"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 200.jpg",
+          "heading": "Мангольд с тыквой",
+          "text": "250 гр.",
+          "amountText": "Количество",
+          "price": "470"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 203.jpg",
+          "heading": "Кавказский гриль",
+          "text": "240 гр.",
+          "amountText": "Количество",
+          "price": "530"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 204.jpg",
+          "heading": "Ассорти овощей",
+          "text": "200 гр.\n\nОгурец, помидор, перец, зелень",
+          "amountText": "Количество",
+          "price": "390"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 207.jpg",
+          "heading": "Ассорти кавказских сыров",
+          "text": "160 гр.",
+          "amountText": "Количество",
+          "price": "550"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 208.jpg",
+          "heading": "Слабосоленая семга с тостами",
+          "text": "150 гр.",
+          "amountText": "Количество",
+          "price": "620"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 211.jpg",
+          "heading": "Мясная тарелка",
+          "text": "180/30 гр.\nКуриный рулет, буженина, язык",
+          "amountText": "Количество",
+          "price": "520"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/gray.svg",
+          "heading": "Фруктовая ваза",
+          "text": "600 гр.",
+          "amountText": "Количество",
+          "price": "720"
+        }
+      }
+    ],
+    "bar": [
+      {
+        "item": {
+          "image": "/images/gray.svg",
+          "heading": "Чипсы",
+          "text": "90 гр.",
+          "amountText": "Количество",
+          "price": "180"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/gray.svg",
+          "heading": "Арахис",
+          "text": "40 гр.",
+          "amountText": "Количество",
+          "price": "100"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/gray.svg",
+          "heading": "Фисташки",
+          "text": "40 гр.",
+          "amountText": "Количество",
+          "price": "100"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/gray.svg",
+          "heading": "Шоколад \"Риттер Спорт\" в асс.",
+          "text": "100 гр.",
+          "amountText": "Количество",
+          "price": "250"
+        }
+      }
+    ],
+    "snacksTitle": "Горячие закуски",
+    "desert": [
+      {
+        "item": {
+          "image": "/images/gray.svg",
+          "heading": "Фруктовая ваза",
+          "text": "600 гр.",
+          "amountText": "Количество",
+          "price": "720"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 382.jpg",
+          "heading": "Штрудель яблочный",
+          "text": "140/5 гр.",
+          "amountText": "Количество",
+          "price": "300"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 379.jpg",
+          "heading": "Штрудель вишневый",
+          "text": "140/5 гр.",
+          "amountText": "Количество",
+          "price": "300"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 383.jpg",
+          "heading": "Чизкейк",
+          "text": "120 гр.\n\nВафли,крем из сыра \"Филадельфия\"и абрикосового геля",
+          "amountText": "Количество",
+          "price": "350"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 381.jpg",
+          "heading": "Сырники",
+          "text": "130 гр.",
+          "amountText": "Количество",
+          "price": "250"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 384.jpg",
+          "heading": "Мороженое в асс.",
+          "text": "60 гр.\n\n1 шарик",
+          "amountText": "Количество",
+          "price": "150"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 380.jpg",
+          "heading": "Блинчики",
+          "text": "150 гр.",
+          "amountText": "Количество",
+          "price": "200"
+        }
+      }
+    ],
+    "extrasTitle": "Дополнительные опции",
+    "sandwitchTitle": "Сэндвичи и бургеры и холодные закуски",
+    "beerBottle": [
+      {
+        "item": {
+          "image": "/images/Rectangle 433.jpg",
+          "heading": "Abbe Bionde\nСетлый эль",
+          "text": "0,33 л.",
+          "amountText": "Количество",
+          "price": "250"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 434.jpg",
+          "heading": "Hoegaarden Нефильтрованное",
+          "text": "0.45 л.",
+          "amountText": "Количество",
+          "price": "300"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 427.jpg",
+          "heading": "Bud\nСветлое б/а",
+          "text": "0.33 л.",
+          "amountText": "Количество",
+          "price": "250"
+        }
+      }
+    ],
+    "bread": [
+      {
+        "item": {
+          "image": "/images/Rectangle 354.jpg",
+          "heading": "Маргарита",
+          "text": "32 см. / 370 гр.",
+          "amountText": "Количество",
+          "price": "600"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 360.jpg",
+          "heading": "Салями пеперони",
+          "text": "32 см. / 400 гр.",
+          "amountText": "Количество",
+          "price": "630"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 355.jpg",
+          "heading": "4 Сыра",
+          "text": "32 см. / 410 гр.",
+          "amountText": "Количество",
+          "price": "650"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 361.jpg",
+          "heading": "Ветчина с грибами",
+          "text": "32 см. / 420 гр.",
+          "amountText": "Количество",
+          "price": "650"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 358.jpg",
+          "heading": "Ананс с курицей",
+          "text": "32 см. / 450 гр.",
+          "amountText": "Количество",
+          "price": "650"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 363.jpg",
+          "heading": "Большая мясная",
+          "text": "32 см. / 470 гр.",
+          "amountText": "Количество",
+          "price": "650"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 357.jpg",
+          "heading": "Охотничья",
+          "text": "32 см. / 450 гр.",
+          "amountText": "Количество",
+          "price": "650"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 365.jpg",
+          "heading": "Карбонара",
+          "text": "32 см. / 500 гр.",
+          "amountText": "Количество",
+          "price": "650"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 356.jpg",
+          "heading": "Цезарь",
+          "text": "32 см. / 400 гр.",
+          "amountText": "Количество",
+          "price": "650"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 362.jpg",
+          "heading": "Фокача",
+          "text": "32см. / 180 гр.",
+          "amountText": "Количество",
+          "price": "170"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 362.jpg",
+          "heading": "Фокача томатная",
+          "text": "32 см./ 240 гр.",
+          "amountText": "Количество",
+          "price": "170"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 364.jpg",
+          "heading": "Хлебная корзина",
+          "text": "120 гр.",
+          "amountText": "Количество",
+          "price": "170"
+        }
+      }
+    ],
+    "title": "Ресторан",
+    "fish": [
+      {
+        "item": {
+          "image": "/images/Rectangle 305.jpg",
+          "heading": "Большой Средиземноморский Дорадо",
+          "text": "250/50 гр.\n\nОхлажденная Дорадо на гриле с пряными травами",
+          "amountText": "Количество",
+          "price": "1200"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 306.jpg",
+          "heading": "Стейк лосося на гриле",
+          "text": "150/30 гр.\n\nФиле семги с Фарерских островов на гриле",
+          "amountText": "Количество",
+          "price": "850"
+        }
+      }
+    ],
+    "menuTitle": "Фуршетное меню",
+    "hall": [
+      {
+        "item": {
+          "image": "/images/Rectangle 461.jpg",
+          "video": "/images/small_hall-web.mp4",
+          "heading": "Малый зал",
+          "text": "Пн - Чтв (1 час) – **7 000 р.**\nПт – Вс (1 час) – **10 000 р.**"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 464.jpg",
+          "video": "/images/medium_hall-web.mp4",
+          "heading": "Средний зал",
+          "text": "До 50-ти гостей\nПн - Чтв (1 час) – **7 000 р.**\nПт – Вс (1 час) – **10 000 р.**"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 472.jpg",
+          "video": "/images/big_hall-web.mp4",
+          "heading": "Большой зал",
+          "text": "Пн - Чтв (1 час) – **7 000 р.**\nПт – Вс (1 час) – **10 000 р.**"
+        }
+      }
+    ],
+    "sauses": [
+      {
+        "item": {
+          "image": "/images/Rectangle 338.jpg",
+          "heading": "Кетчуп",
+          "text": "50 гр.",
+          "amountText": "Количество",
+          "price": "80"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 341.jpg",
+          "heading": "Барбекю",
+          "text": "50 гр.",
+          "amountText": "Количество",
+          "price": "80"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 347.jpg",
+          "heading": "Майонез",
+          "text": "50 гр.",
+          "amountText": "Количество",
+          "price": "80"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 348.jpg",
+          "heading": "Чесночный",
+          "text": "50 гр.",
+          "amountText": "Количество",
+          "price": "80"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 351.jpg",
+          "heading": "Остро-сладкий",
+          "text": "50 гр.",
+          "amountText": "Количество",
+          "price": "80"
+        }
+      }
+    ],
+    "drinks": [
+      {
+        "item": {
+          "image": "/images/Rectangle 401.jpg",
+          "heading": "Св. Источник",
+          "text": "0,5 л.",
+          "amountText": "Количество",
+          "price": "120"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 408.jpg",
+          "heading": "Кола, Кола-Лайт, Фанта, Спрайт (ж/б)",
+          "text": "0,33 л.",
+          "amountText": "Количество",
+          "price": "130"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 405.jpg",
+          "heading": "Кола, Фанта, Спрайт (пластик)",
+          "text": "0.5 л.",
+          "amountText": "Количество",
+          "price": "180"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 412.jpg",
+          "heading": "Лимонад классический",
+          "text": "1 л.",
+          "amountText": "Количество",
+          "price": "450"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 412.jpg",
+          "heading": "Лимонад клубничный",
+          "text": "1 л.",
+          "amountText": "Количество",
+          "price": "450"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 412.jpg",
+          "heading": "Лимонад облепиховый",
+          "text": "1 л.",
+          "amountText": "Количество",
+          "price": "450"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 412.jpg",
+          "heading": "Тархун",
+          "text": "1 л.",
+          "amountText": "Количество",
+          "price": "450"
+        }
+      }
+    ],
+    "sidesTitle": "Гарниры",
+    "sides": [
+      {
+        "item": {
+          "image": "/images/Rectangle 327.jpg",
+          "heading": "Картофель фри",
+          "text": "150 гр.",
+          "amountText": "Количество",
+          "price": "220"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 330.jpg",
+          "heading": "Картофель по-деревенски",
+          "text": "150 гр.",
+          "amountText": "Количество",
+          "price": "220"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 328.jpg",
+          "heading": "Запеченый картофель Креоле",
+          "text": "150 гр.",
+          "amountText": "Количество",
+          "price": "220"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 331.jpg",
+          "heading": "Дикий рис",
+          "text": "200 гр.",
+          "amountText": "Количество",
+          "price": "200"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 329.jpg",
+          "heading": "Овощи-гриль",
+          "text": "150 гр.",
+          "amountText": "Количество",
+          "price": "250"
+        }
+      }
+    ],
+    "drinksTitle": "Напитки б/а",
+    "sausesTitle": "Соусы",
+    "menu": [
+      {
+        "item": {
+          "image": "/images/Rectangle 215.jpg",
+          "heading": "Канапе Капрезе",
+          "text": "35 гр.",
+          "amountText": "Количество",
+          "price": "70"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 225.jpg",
+          "heading": "Канапе с семгой и молодым сыром",
+          "text": "35 гр.",
+          "amountText": "Количество",
+          "price": "70"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 216.jpg",
+          "heading": "Канапе а-ля русс с бужениной",
+          "text": "35 гр.",
+          "amountText": "Количество",
+          "price": "70"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 226.jpg",
+          "heading": "Канапе с сельдью",
+          "text": "35 гр.",
+          "amountText": "Количество",
+          "price": "70"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 224.jpg",
+          "heading": "Брускетта Филадельфия с семгой",
+          "text": "1 шт.\n\nНа ржаном хлебце, с нежноой слабосоленой семгой и зеленью",
+          "amountText": "Количество",
+          "price": "150"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 227.jpg",
+          "heading": "Шот с овощами и соусом айоли",
+          "text": "1 шт.\n\nБакинские овощи с зеленью и соусом айоли",
+          "amountText": "Количество",
+          "price": "80"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 217.jpg",
+          "heading": "Ролл \"Сельдь под шубой\"",
+          "text": "1 шт.\n\nРолл  из классического салата в оригинальной подаче,на шпажке",
+          "amountText": "Количество",
+          "price": "150"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 228.jpg",
+          "heading": "Цезарь с семгой в креманке",
+          "text": "1 шт.\n\nКлассический цезарь с семгой в прозрачной форме",
+          "amountText": "Количество",
+          "price": "150"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 218.jpg",
+          "heading": "Цезарь с креветками в креманке",
+          "text": "1 шт.\n\nКлассический цезарь с королевскими креветками в прозрачной форме",
+          "amountText": "Количество",
+          "price": "180"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 229.jpg",
+          "heading": "Цезарь с курицей в креманке",
+          "text": "1 шт.\n\nКлассический цезарь с купиным филе на гриле,в прозрачной форме",
+          "amountText": "Количество",
+          "price": "130"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 219.jpg",
+          "heading": "Греческий в креманке",
+          "text": "1 шт.\n\nПрозрачная форма с яркими бакинскими овощами,сыром и оливками",
+          "amountText": "Количество",
+          "price": "100"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 230.jpg",
+          "heading": "Креветка Темпура с соусом тар-тар",
+          "text": "1 шт.\n\nЦелая креветка в хрустящей панировке,подается с соусом тар-тар в высокой прозрачной форме",
+          "amountText": "Количество",
+          "price": "170"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 220.jpg",
+          "heading": "Мини Тирамису",
+          "text": "1 шт.\n\nМини десерт Тирамису",
+          "amountText": "Количество",
+          "price": "170"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 231.jpg",
+          "heading": "Мини Чизкейк",
+          "text": "1 шт.\n\nКлассический мини Чиз кейк",
+          "amountText": "Количество",
+          "price": "170"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 221.jpg",
+          "heading": "Мафин с шоколадной крошкой",
+          "text": "1 шт.\n\nКлассический шоколадный мафин",
+          "amountText": "Количество",
+          "price": "170"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 232.jpg",
+          "heading": "Креманка с фруктами",
+          "text": "1 шт.\n\nЯркий фруктовый салат в прозрачной форме",
+          "amountText": "Количество",
+          "price": "170"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 222.jpg",
+          "heading": "Гренки Блю-чиз",
+          "text": "120 гр.",
+          "amountText": "Количество",
+          "price": "120"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 233.jpg",
+          "heading": "Черный блинчик Жульен",
+          "text": "100 гр.",
+          "amountText": "Количество",
+          "price": "190"
+        }
+      }
+    ],
+    "hallTitle": "аренда зала"
+  },
+  "disc": {
+    "icon": "/images/Group 642.svg",
+    "heading": "Конфигуратор мероприятий",
+    "text": "Организовать праздник в MIKS KARTING стало еще проще!\n\nАренда картинга, VR-арены и предзаказ в ресторане теперь на одной странице в удобном конфигураторе.\n\nУбедитесь сами!",
+    "button": "Заказать мероприятие",
+    "items": [
+      {
+        "item": {
+          "image": "/images/track.svg",
+          "text": "Самая большая и комфортная\nтрасса внутри ТТК"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/cart.svg",
+          "text": "30 прокатных картов и\n15 детских картов"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/vr.svg",
+          "text": "Арена виртуальной реальности. Оборудование нового поколения, которое позволяет играть без проводов, рюкзаков, автоматов."
+        }
+      },
+      {
+        "item": {
+          "image": "/images/restoraunt.svg",
+          "text": "3 зала ресторана (вместимость до 300 чел) с профессиональным видео и аудио оборудованием"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/event.svg",
+          "text": "Профессиональная\nevent-команда"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/parking.svg",
+          "text": "Парковка на 100 машин"
+        }
+      }
+    ]
+  },
+  "title": "Главная ",
+  "textOne": "Мы рады, что вы выбрали MIKS KARTING для проведения вашего праздника!\n\nДля того, чтобы быстро произвести расчет его стоимости, выберите опции и их количество в каждом из представленных ниже разделов и нажмите кноку «отправить», заполнив поля с контактными данными.\n\nНаш менеджер свяжется с вами в ближайшее время для уточнения всех деталей и корректировки стоимости.",
+  "disclaimer": {
+    "qrcode": "/images/image 1.jpg",
+    "text": "Уважаемые посетители, просим вас обратить внимание, что для посещения картинг-центра MIKS KARTING пешком и на автомобиле на пункте охраны необходимо показать визитку нашей организации.\n\nПроезд такси на территорию запрещен.",
+    "icons": "/images/Group 99.svg"
+  },
+  "collapsibleOne": {
+    "items": [
+      {
+        "item": {
+          "image": "/images/Rectangle 99.jpg",
+          "heading": "Дополнительный карт в заезде",
+          "text": "Пн - Пт до 18:00 – **900 р.**\n\nПН- ЧТВ с 18:00 – **1400 р.**\n\nПт с 18:00, Сб, Вс – **1800 р.**",
+          "amountText": "Количество (макс. 2)",
+          "max": "2",
+          "price": "1800"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 101.jpg",
+          "heading": "Судья турнира",
+          "text": "Указана стоимость за час работы",
+          "amountText": "Количество часов",
+          "price": "8000",
+          "from": "true"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 119.jpg",
+          "heading": "Ведение турнирной таблицы",
+          "text": "Указана стоимость за час работы",
+          "amountText": "Количество часов",
+          "price": "4000"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 101 (1).jpg",
+          "heading": "Группа поддержки",
+          "text": "Указана стоимость за час работы",
+          "amountText": "Количество часов",
+          "price": "15000"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/gray.svg",
+          "heading": "Анимация",
+          "text": "Аквагрим, химическое шоу\n\nСтоимость уточняется с менеджером",
+          "amountText": "Количество часов",
+          "from": "true",
+          "price": "8000"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 132.jpg",
+          "heading": "Фото мероприятия",
+          "text": "Стоимость от 2-х часов - 2 500 р.",
+          "amountText": "Количество часов",
+          "price": "3000",
+          "discountFrom": {
+            "from": 2,
+            "discountPrice": 2500,
+            "enabled": "true"
+          }
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 126.jpg",
+          "heading": "Медаль",
+          "text": "Диаметр 40 мм",
+          "amountText": "Количество",
+          "stretch": "true",
+          "price": "300"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 123.jpg",
+          "heading": "Медаль",
+          "text": "Диаметр 50 мм",
+          "amountText": "Количество",
+          "stretch": "true",
+          "price": "400"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 124.jpg",
+          "heading": "Медаль",
+          "text": "Диаметр 70 мм",
+          "amountText": "Количество",
+          "stretch": "true",
+          "price": "500"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 125.jpg",
+          "heading": "Медаль с текстом",
+          "text": "Диаметр 70 мм",
+          "amountText": "Количество",
+          "stretch": "true",
+          "price": "500"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 134.jpg",
+          "heading": "Комплект медалей",
+          "text": "Диаметр 50 мм",
+          "amountText": "Количество",
+          "stretch": "true",
+          "price": "1500"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 136.jpg",
+          "heading": "Комплект медалей",
+          "text": "Диаметр 60 мм",
+          "amountText": "Количество",
+          "stretch": "true",
+          "price": "1700"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 122.jpg",
+          "heading": "Кубок",
+          "text": "20,5 см",
+          "amountText": "Количество",
+          "stretch": "true",
+          "price": "1400"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 134 (1).jpg",
+          "heading": "Кубок",
+          "text": "23,5 см",
+          "amountText": "Количество",
+          "stretch": "true",
+          "price": "1500"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 136 (1).jpg",
+          "heading": "Кубок",
+          "text": "22 см",
+          "amountText": "Количество",
+          "stretch": "true",
+          "price": "1400"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 138.jpg",
+          "heading": "Кубок",
+          "text": "23 см",
+          "amountText": "Количество",
+          "stretch": "true",
+          "price": "1500"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 140.jpg",
+          "heading": "Кубок",
+          "text": "22 см",
+          "amountText": "Количество",
+          "stretch": "true",
+          "price": "1500"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 140 (1).jpg",
+          "heading": "Кубок",
+          "text": "25,5 см",
+          "amountText": "Количество",
+          "stretch": "true",
+          "price": "3000"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 140 (2).jpg",
+          "heading": "Комплект кубков",
+          "text": "39,5 см\n\n33,5 см\n\n28,5 см",
+          "amountText": "Количество",
+          "stretch": "true",
+          "price": "5500"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 140 (3).jpg",
+          "heading": "Кубок",
+          "text": "36,5 см\n\n35 см\n\n32,5 см",
+          "amountText": "Количество",
+          "stretch": "true",
+          "price": "4000"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 140 (4).jpg",
+          "heading": "Комплект кубков",
+          "text": "27 см",
+          "amountText": "Количество",
+          "stretch": "true",
+          "price": "11000"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/награды_1.jpg",
+          "heading": "Комплект кубков",
+          "text": "2﻿4,3 см",
+          "amountText": "Количество",
+          "price": "11000",
+          "stretch": "true"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/награды_2.jpg",
+          "heading": "Комплект кубков",
+          "amountText": "Количество",
+          "price": "11000",
+          "stretch": "true",
+          "text": "3﻿0 см"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/награды_3.jpg",
+          "heading": "Комплект кубков",
+          "text": "3﻿2 см",
+          "amountText": "Количество",
+          "price": "11000",
+          "stretch": "true",
+          "from": null
+        }
+      },
+      {
+        "item": {
+          "image": "/images/награды_4.jpg",
+          "heading": "Комплект кубков",
+          "text": "2﻿6 см",
+          "amountText": "Количество",
+          "stretch": "true",
+          "price": "11000",
+          "from": null
+        }
+      },
+      {
+        "item": {
+          "image": "/images/награды_5.jpg",
+          "heading": "Комплект кубков",
+          "text": "3﻿0 см",
+          "amountText": "Количество",
+          "stretch": "true",
+          "price": "11000",
+          "from": null
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 127.jpg",
+          "heading": "Сертификат",
+          "text": "На 3 000 руб.",
+          "amountText": "Количество",
+          "stretch": "true",
+          "price": "3000"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 130.jpg",
+          "heading": "Сертификат",
+          "text": "На 5 000 руб.",
+          "amountText": "Количество",
+          "stretch": "true",
+          "price": "5000"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 128.jpg",
+          "heading": "Сертификат",
+          "text": "На 10 000 руб.",
+          "amountText": "Количество",
+          "stretch": "true",
+          "price": "10000"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 129.jpg",
+          "heading": "Воздушные шары",
+          "text": "Стоиомсть услуги обсуждается с менеджером",
+          "amountText": "Количество",
+          "from": "true",
+          "price": "5000"
+        }
+      }
+    ],
+    "extras": "дополнительные опции",
+    "price": {
+      "mondayToFriday": "19800",
+      "mondayToThursday": "30800",
+      "fridayToSunday": "39600",
+      "minTime": "0.5",
+      "workUntil": 24
+    },
+    "prices": "Понедельник – пятница до 18:00 – **19 800 руб.**\n\nПонедельник – четверг после 18:00 – **30 800 руб.**\n\nПятница (после 18:00) – воскресенье, праздничные и предпраздничные дни – **39 600 руб.**\n\nМинимальное время аренды – **30 минут**",
+    "subText": "Место проведения: площадка картинг-трека\n\nКарты: Sodi RT 8., 12ед.\n\nПеред заездом предусмотренинструктаж участников, подбор экипировки (комбинезон или куртака, шапочки, перчатки одноразовые, шлем).\n\nВ течение часа проходит 4 заезда, продолжительность 10 мин. По желанию, при количестве от 30 и более, время заезда можно сократить.\n\nВ заездах могут участвовать дети возрастом от 8 лет, ростом от 135см\n\nПрибытие на площадку за 30 минут до начала мероприятия, при себе иметь документы подтверждающие возраст участников заезда",
+    "titleForSummary": "Аренда трассы",
+    "dateAndTime": "выберите дату и время",
+    "title": "Картинг заезд",
+    "image": "/images/Rectangle 118.jpg"
+  },
+  "pdfData": {
+    "qr": "/images/pdf-qr.jpg",
+    "coming": "Просим вас обратить внимание, что для посещения картинг-центра MIKS KARTING пешком и на автомобиле на пункте охраны необходимо показать визитку нашей организации.\n\nПроезд такси на территорию запрещен.",
+    "heading": {
+      "dear": "Уважаемый",
+      "aya": "(ая)",
+      "thanks": ",\nмы рады что вы выбрали MIKS KARTing\nдля проведения мероприятия!",
+      "thanksConf": ",\nваш заказ успешно оформлен.",
+      "wait": "\nЖдем вас в MIKS KARTING!"
+    },
+    "details": "Ниже вы можете ознакомится с деталями вашего заказа\nи его предварительной стоимостью:",
+    "detailsConf": "Ниже вы можете ознакомится с деталями и стоимостью вашего заказа:",
+    "logo": "/images/logo-pdf.jpg",
+    "name": "Марина Александровна",
+    "phone": "+7 (495) 640 33 02",
+    "summaryIcons": {
+      "one": "/images/Vector11.jpg",
+      "two": "/images/Vectorc.jpg",
+      "three": "/images/Vector (1)c.jpg"
+    },
+    "mailUs": "или напишите на почту:",
+    "icons": "/images/pdf-icons.jpg",
+    "copywright": "+7 (495) 640 33 02\nМосква, Шарикоподшипниковская, улица 13, ст. 41 (мы в здании напротив)\nmanager@miks-karting.ru (продажа сертификатов)\ninfo@miks-karting.ru (организация корпоративных мероприятий)\nalex@miks-karting.ru (по вопросам сотрудничества)",
+    "soon": "В скором времени наш менеджер свяжется вами для уточнения\nдеталей и корректировки стоимости заказа.\n\nЕсли этого не произошло, пожалуйста свяжитесь с нами по телефону:",
+    "email": "info@miks-karting.ru",
+    "soonConf": "Если у вас остались вопросы, пожалуйста свяжитесь с нами по телефону:"
+  },
+  "smallTexts": {
+    "total": "Итого:",
+    "totalSumm": "Итоговая сумма:",
+    "price": "Стоимость",
+    "totalWithDiscount": "Итого (с учетом скидки):",
+    "time": "время:",
+    "collapse": "Cвернуть",
+    "negotiable": {
+      "desktop": "Стоимость уточняется с менеджером",
+      "mobile": "Стоимость уточняется"
+    },
+    "reset": "Сбросить",
+    "TimeUntil": "до",
+    "serviceFee": "Обслуживание +10%",
+    "service": "Обслуживание +10%",
+    "timeFrom": "Время с",
+    "amount": "Сумма:",
+    "buttonSend": "Отправить заказ",
+    "expand": "Развернуть",
+    "youChose": "Вы выбрали:",
+    "youHaventChosen": "Вы ничего не выбрали"
+  }
+}

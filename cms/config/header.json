@@ -1,0 +1,78 @@
+{
+  "announcement": {
+    "title": "Теперь мы MIKS KARTING! Подробнее... ",
+    "link": "https://miks-karting.ru/news/miks-forza/"
+  },
+  "logo": {
+    "image": "/images/mk-logo.svg",
+    "link": "https://miks-karting.ru"
+  },
+  "links": [
+    {
+      "item": {
+        "title": "Картинг",
+        "link": "https://miks-karting.ru/carting/"
+      }
+    },
+    {
+      "item": {
+        "title": "VR Арена",
+        "link": "vrclub"
+      }
+    },
+    {
+      "item": {
+        "title": "Ресторан",
+        "link": "https://miks-karting.ru/restaurant/"
+      }
+    },
+    {
+      "item": {
+        "title": "Праздники",
+        "link": "https://miks-karting.ru/activity/"
+      }
+    },
+    {
+      "item": {
+        "title": "Школа картинга",
+        "link": "https://miks-karting.ru/children/"
+      }
+    },
+    {
+      "item": {
+        "title": "Соревнования",
+        "link": "https://miks-karting.ru/sorevnovaniya/"
+      }
+    }
+  ],
+  "linksTwo": [
+    {
+      "item": {
+        "title": "Партнеры",
+        "link": "https://miks-karting.ru/partners/"
+      }
+    },
+    {
+      "item": {
+        "title": "СМИ о нас",
+        "link": "https://miks-karting.ru/massmedia/"
+      }
+    },
+    {
+      "item": {
+        "title": "Новости",
+        "link": "https://miks-karting.ru/news/"
+      }
+    },
+    {
+      "item": {
+        "title": "Контакты",
+        "link": "https://miks-karting.ru/#contacts"
+      }
+    }
+  ],
+  "booking": {
+    "title": "Онлайн бронирование ",
+    "link": "https://booking.miks-karting.ru"
+  }
+}

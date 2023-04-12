@@ -1,0 +1,594 @@
+/* cyrillic-ext */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rubik/v26/iJWKBXyIfDnIV7nMrXyw023e1Ik.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rubik/v26/iJWKBXyIfDnIV7nFrXyw023e1Ik.woff2)
+    format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* hebrew */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rubik/v26/iJWKBXyIfDnIV7nDrXyw023e1Ik.woff2)
+    format("woff2");
+  unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rubik/v26/iJWKBXyIfDnIV7nPrXyw023e1Ik.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rubik/v26/iJWKBXyIfDnIV7nBrXyw023e.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rubik/v26/iJWKBXyIfDnIV7nMrXyw023e1Ik.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rubik/v26/iJWKBXyIfDnIV7nFrXyw023e1Ik.woff2)
+    format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* hebrew */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rubik/v26/iJWKBXyIfDnIV7nDrXyw023e1Ik.woff2)
+    format("woff2");
+  unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rubik/v26/iJWKBXyIfDnIV7nPrXyw023e1Ik.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rubik/v26/iJWKBXyIfDnIV7nBrXyw023e.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rubik/v26/iJWKBXyIfDnIV7nMrXyw023e1Ik.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rubik/v26/iJWKBXyIfDnIV7nFrXyw023e1Ik.woff2)
+    format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* hebrew */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rubik/v26/iJWKBXyIfDnIV7nDrXyw023e1Ik.woff2)
+    format("woff2");
+  unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rubik/v26/iJWKBXyIfDnIV7nPrXyw023e1Ik.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rubik/v26/iJWKBXyIfDnIV7nBrXyw023e.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rubik/v26/iJWKBXyIfDnIV7nMrXyw023e1Ik.woff2)
+    format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+    U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rubik/v26/iJWKBXyIfDnIV7nFrXyw023e1Ik.woff2)
+    format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* hebrew */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rubik/v26/iJWKBXyIfDnIV7nDrXyw023e1Ik.woff2)
+    format("woff2");
+  unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rubik/v26/iJWKBXyIfDnIV7nPrXyw023e1Ik.woff2)
+    format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/rubik/v26/iJWKBXyIfDnIV7nBrXyw023e.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: greyscale;
+  text-rendering: optimizeLegibility;
+  font-family: "Rubik", sans-serif;
+  letter-spacing: 0.02rem;
+}
+.terms__body {
+  scrollbar-color: rgba(255, 255, 255, 0.3) #2b4460;
+}
+
+.terms__body::-webkit-scrollbar-track {
+  background: #2b4460;
+}
+
+.terms__body::-webkit-scrollbar-thumb {
+  border: 2px solid #2b4460;
+}
+/*Level 5*/
+.calendar-header,
+input,
+select,
+option,
+.confirm-dialog,
+.terms {
+  background-color: #2b4460;
+}
+/*Level 4*/
+.calendar__period-navigation,
+.colors {
+  background-color: #2b4460;
+}
+/*Level 3*/
+.calendar__card,
+.reservation-header {
+  background-color: #2b4460;
+}
+.day_start .day__body {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/*Level 1*/
+.application,
+.catalog,
+.reservation__content,
+.order,
+.reservation,
+.order__body,
+.order__cart,
+.final-screen,
+.yandex-form,
+.reservation__info,
+.order-reservation,
+.navigation-bar,
+.catalog-item,
+.reservation__info,
+.order-reservation {
+  background-color: #2b4460;
+}
+.catalog-item {
+  background-color: #22364d;
+  border-radius: 1rem;
+}
+
+@media (max-width: 599px) {
+  .calendar {
+    background-color: #2b4460;
+  }
+}
+
+.day__shares-block,
+.day__name,
+body,
+input,
+select,
+.catalog-item__header,
+.calendar__period-navigation,
+.calendar__period-name,
+.calendar-resource__list-day-title,
+.time-rental__hour-name,
+.calendar-resource__title,
+.reservation-invoice__amount,
+.reservation-invoice__total-amount,
+.reservation__info,
+.order-reservation__info,
+.order-invoice-item__amount,
+.catalog__templates_hint,
+.yandex-form .order-state,
+.payanyway-form .order-state,
+.stripe-intents .order-state,
+.custom-gateway .order-state,
+.date-rental__date-input,
+.text-field__input,
+.radio-field__label,
+.radio-field,
+.checkbox-field,
+.navigation-bar__title,
+.navigation-bar,
+.action-button,
+.interval__name {
+  color: rgba(255, 255, 255, 1);
+}
+
+.calendar__weekday {
+  color: rgba(255, 255, 255, 1);
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+.calendar__period-name {
+  text-transform: capitalize;
+}
+.icon-right-open-1:before,
+.icon-left-open-1:before {
+  font-size: 1rem;
+}
+.icon-right-open-1,
+.icon-left-open-1 {
+  display: inherit;
+  line-height: 0.8rem;
+}
+
+.calendar-header__close::before,
+.calendar-header__close::after,
+.catalog-header__close::before,
+.catalog-header__close::after,
+.order-header__close::before,
+.order-header__close::after,
+.order-reservation__delete::before,
+.order-reservation__delete::after {
+  background-color: #fff;
+}
+
+.calendar-header__right {
+  position: relative;
+}
+.calendar-header__right::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background-color: #7ccdfa;
+  border-radius: 9999px;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-top: 11px;
+  margin-left: 5px;
+}
+.navigation-bar__right {
+  position: relative;
+}
+.navigation-bar__right::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background-color: #7ccdfa;
+  border-radius: 9999px;
+  width: 2.5rem;
+  height: 2.5rem;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  margin-left: 1px;
+  margin-top: -1px;
+}
+.reservation.main-view .navigation-bar__right::before,
+.application_calendar-visible .navigation-bar__right::before {
+  content: none;
+}
+.intervals_15 .interval__heading {
+  min-width: 6rem;
+}
+
+.calendar_event .colors__value {
+  border-radius: 100%;
+}
+.interval__shares-block {
+  font-size: 0.5rem;
+  padding: 0 0.75rem;
+  border-radius: 1.25rem;
+  line-height: 1.15rem;
+  background: rgba(0, 0, 0, 0.2);
+}
+.interval__button {
+  border-radius: 0.4375rem;
+}
+.interval__time {
+  font-weight: 600;
+}
+.time-event {
+  margin: 0 0 0.75rem 0;
+}
+.day__name {
+  font-size: 1.15rem;
+  padding-bottom: 0.625rem;
+  font-weight: 400 !important;
+}
+
+.number-field__input-container,
+.reservation-dates__input {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.button.reservation__save,
+.button.order__process,
+.action-button.final-screen__close,
+.button.empty-cart__new-reservation,
+.action-button.action-button_primary.catalog-item__book {
+  background: #ffffff;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 2.8125rem;
+  height: 2.8125rem;
+  padding: 0 3rem;
+  width: 100%;
+  color: #000;
+  text-transform: capitalize;
+  letter-spacing: 0.02rem;
+  text-align: center;
+}
+
+.text-field__input,
+.reservation-dates__input,
+.number-field__input-container {
+  background: #22364d;
+  border-radius: 5px;
+  border-bottom: none;
+}
+.text-field__label {
+  color: #fff;
+  padding-bottom: 0.5rem;
+}
+
+.application {
+  background-color: #22364d;
+}
+
+.reservation__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.number-field__input-container.price-options__shares {
+  margin-left: 0;
+}
+.reservation-field__container {
+  display: none;
+}
+
+.final-screen__icon {
+  border-color: #fff;
+}
+
+.final-screen__icon-container {
+  background: #7ffa7c;
+}
+
+.final-screen__header {
+  font-size: 2rem;
+  padding-bottom: 0.5rem;
+}
+.final-screen__order-number {
+  font-size: 1.15rem;
+}
+
+.form__label .reservation-dates__label {
+  color: #fff;
+  padding-bottom: 0.625rem;
+}
+.catalog-item__header,
+.catalog-item__description,
+.catalog-item__bottom {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  color: #fff;
+}
+.catalog-item__bottom {
+  padding-bottom: 1.5rem;
+}
+.catalog-item__header {
+  padding-top: 1.5rem;
+  font-weight: 400;
+  font-size: 2rem;
+}
+.catalog-item__description strong:first-child {
+  font-weight: 400;
+  font-size: 1.15rem;
+}
+.catalog-item__description {
+  font-size: 12px;
+  padding-bottom: 1.5rem;
+  padding-top: 0.7rem;
+}
+.navigation-bar__title.catalog-header__title {
+  font-size: 1.5rem;
+}
+.catalog-item img {
+  aspect-ratio: 2.8;
+}
+
+.reservation-invoice__amount {
+  font-size: 2rem;
+}
+.reservation-invoice__item {
+  padding-bottom: 0.5rem;
+  padding-top: 1rem;
+}
+.reservation-invoice__name {
+  visibility: hidden;
+  line-height: 1;
+  width: 3.7rem;
+}
+.reservation-invoice__price {
+  line-height: 1;
+}
+.reservation-invoice__name:before {
+  visibility: visible;
+  content: "Сумма: ";
+  position: absolute;
+}
+
+.reservation-invoice__item {
+  align-items: baseline;
+}
+.checkbox-field.price-options__shared-option {
+  margin-top: 0;
+  visibility: hidden;
+}
+.checkbox-field.price-options__shared-option::before {
+  content: "Количество игроков";
+  position: absolute;
+  visibility: visible;
+  font-size: 0.875rem;
+}
+.form__label.reservation-dates__label {
+  visibility: hidden;
+  color: #fff;
+  padding-bottom: 0.625rem;
+}
+.form__label.reservation-dates__label::before {
+  content: "Дата и время";
+  visibility: visible;
+}
+.empty-cart {
+  padding: 0 1rem;
+}
+.reservation-invoice__details {
+  align-items: baseline;
+}
+.number-field__input-container.price-options__shares {
+  width: 100%;
+  text-align: center;
+}
+.order__content-bottom {
+  padding-top: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.button.interval__button.interval_disabled {
+  color: #000;
+}
+.final-screen {
+  padding: 0 1rem;
+}
+.order__content-bottom {
+  padding-bottom: 7rem;
+}
+@media (min-width: 768px) {
+  .form__label.reservation-dates__label::before,
+  .checkbox-field.price-options__shared-option::before {
+    font-size: 1.15rem;
+  }
+  .reservation-dates,
+  .price-options {
+    width: 45%;
+  }
+}

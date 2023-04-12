@@ -1,0 +1,1946 @@
+backend:
+  name: git-gateway
+  # name: github
+  repo: vradionovskii/miks-conf
+  branch: main
+media_folder: public/images
+public_folder: /images
+locale: ru
+show_preview_links: false
+collections:
+  - name: seo
+    extension: json
+    format: json
+    label: Конфигурация
+    delete: false
+    editor:
+      preview: false
+    files:
+      - label: SEO
+        name: siteSeo
+        file: cms/config/seo.json
+        fields:
+          - label: URL
+            name: URL
+            widget: string
+          - label: Титул сайта
+            name: siteTitle
+            widget: string
+          - label: Описание сайта
+            name: siteDescription
+            widget: text
+          - label: Превью
+            name: socialCover
+            widget: image
+          - label: Ключевые слова
+            name: keywords
+            widget: text
+      - label: Шапка
+        name: header
+        file: cms/config/header.json
+        fields:
+          - label: Анонс
+            name: announcement
+            widget: object
+            fields:
+              - label: Текст
+                name: title
+                widget: string
+              - label: Ссылка
+                name: link
+                widget: string
+          - label: Лого
+            name: logo
+            widget: object
+            fields:
+              - label: Изображение
+                name: image
+                widget: image
+              - label: Ссылка
+                name: link
+                widget: string
+          - label: Навигация
+            name: links
+            widget: list
+            summary: "{{fields.text}}"
+            field:
+              label: Страница
+              name: item
+              widget: object
+              fields:
+                - label: Текст
+                  name: title
+                  widget: string
+                - label: Ссылка
+                  name: link
+                  widget: string
+          - label: Поднавигация
+            name: linksTwo
+            widget: list
+            summary: "{{fields.text}}"
+            field:
+              label: Страница
+              name: item
+              widget: object
+              fields:
+                - label: Текст
+                  name: title
+                  widget: string
+                - label: Ссылка
+                  name: link
+                  widget: string
+          - label: Бронирование
+            name: booking
+            widget: object
+            fields:
+              - label: Текст
+                name: title
+                widget: string
+              - label: Ссылкаs
+                name: link
+                widget: string
+  - label: Страницы
+    name: pages
+    extension: json
+    format: json
+    delete: false
+    editor:
+      preview: false
+    files:
+      - label: Главная
+        name: homepage
+        file: cms/pages/homepage.json
+        fields:
+          - label: Титул
+            name: title
+            widget: string
+          - label: Баннер
+            name: disc
+            widget: object
+            fields:
+              - label: Иконка
+                name: icon
+                widget: image
+              - label: Заголовок
+                name: heading
+                widget: string
+              - label: Текст
+                name: text
+                widget: text
+              - label: Текст кнопки
+                name: button
+                widget: string
+              - label: Иконки с текстом
+                name: items
+                widget: list
+                summary: "{{fields.text}}"
+                field:
+                  label: Иконка
+                  name: item
+                  widget: object
+                  fields:
+                    - label: Иконка
+                      name: image
+                      widget: image
+                    - label: Текст
+                      name: text
+                      widget: text
+          - label: Конфетти
+            name: background
+            widget: object
+            fields:
+              - label: Десктоп
+                name: desktop
+                widget: image
+              - label: Мобилка
+                name: mobile
+                widget: image
+          - label: Заголовок
+            name: headingOne
+            widget: string
+          - label: Текст
+            name: textOne
+            widget: text
+          - label: Проезд
+            name: disclaimer
+            widget: object
+            fields:
+              - label: Текст
+                name: text
+                widget: text
+              - label: Иконки
+                name: icons
+                widget: image
+              - label: QR
+                name: qrcode
+                widget: image
+          - label: PDF
+            name: pdfData
+            widget: object
+            fields:
+              - label: Лого
+                name: logo
+                widget: image
+              - label: Заголовок
+                name: heading
+                widget: object
+                fields:
+                  - label: Уважаемый
+                    name: dear
+                    widget: string
+                  - label: ая
+                    name: aya
+                    widget: string
+                  - label: Заказ 1
+                    name: thanks
+                    widget: text
+                  - label: Заказ 1 потверждение
+                    name: thanksConf
+                    widget: text
+                  - label: Заказ 2
+                    name: wait
+                    widget: text
+              - label: Иконки
+                name: summaryIcons
+                widget: object
+                fields:
+                  - label: '1'
+                    name: one
+                    widget: image
+                  - label: '2'
+                    name: two
+                    widget: image
+                  - label: '3'
+                    name: three
+                    widget: image
+              - label: Менеджер свяжется
+                name: soon
+                widget: text
+              - label: Свяжитесь
+                name: soonConf
+                widget: text
+              - label: Телефон
+                name: phone
+                widget: string
+              - label: Напишите на почту
+                name: mailUs
+                widget: string
+              - label: Email
+                name: email
+                widget: string
+              - label: Детали
+                name: details
+                widget: text
+              - label: Детали после обработки
+                name: detailsConf
+                widget: text
+              - label: Проезд
+                name: coming
+                widget: text
+              - label: Иконки проезда
+                name: icons
+                widget: image
+              - label: QR
+                name: qr
+                widget: image
+              - label: Контакты
+                name: copywright
+                widget: text
+          - label: Панель администратора
+            name: admin
+            widget: object
+            fields:
+              - label: Заголовок
+                name: headingOne
+                widget: string
+              - label: Подзаголовок
+                name: subHeadingOne
+                widget: string
+              - label: Текст
+                name: textOne
+                widget: markdown
+              - label: Размер скидки
+                name: sale
+                widget: string
+              - label: Отправка заказа
+                name: sendAdmin
+                widget: string
+              - label: Заполните поля
+                name: sendAdminText
+                widget: string
+              - label: ФИО в форме
+                name: namePlaceholder
+                widget: string
+              - label: E-mail в форме
+                name: emailPlaceholder
+                widget: string
+              - label: Cмета
+                name: formDisclaimer
+                widget: string
+              - label: Заголовок отправлено
+                name: sent
+                widget: string
+              - label: Текст отправлено
+                name: sentText
+                widget: string
+              - label: Итоговая сумма
+                name: totalSummOne
+                widget: string
+              - label: С учетом скидок
+                name: totalSummTwo
+                widget: string
+              - label: Заказ с учетом скидок
+                name: msgPlaceholderConf
+                widget: string
+          - label: Тексты
+            name: smallTexts
+            widget: object
+            fields:
+              - label: Итого
+                name: total
+                widget: string
+              - label: Вы выбрали
+                name: youChose
+                widget: string
+              - label: Вы ничего не выбрали
+                name: youHaventChosen
+                widget: string
+              - label: Обслуживание
+                name: serviceFee
+                widget: string
+              - label: Стоимость
+                name: price
+                widget: string
+              - label: Сумма
+                name: amount
+                widget: string
+              - label: Сбросить
+                name: reset
+                widget: string
+              - label: Cвернуть
+                name: collapse
+                widget: string
+              - label: Развернуть
+                name: expand
+                widget: string
+              - label: Время с
+                name: timeFrom
+                widget: string
+              - label: До
+                name: TimeUntil
+                widget: string
+              - label: итоговая сумма
+                name: totalSumm
+                widget: string
+              - label: Кнопка отправить
+                name: buttonSend
+                widget: string
+              - label: time
+                name: time
+                widget: string
+              - label: Стоимость уточняется
+                name: negotiable
+                widget: object
+                fields:
+                  - label: Десктоп
+                    name: desktop
+                    widget: string
+                  - label: Мобилка
+                    name: mobile
+                    widget: string
+          - label: Оформление заказа
+            name: checkout
+            widget: object
+            fields:
+              - label: Заголовок
+                name: heading
+                widget: string
+              - label: Текст
+                name: text
+                widget: text
+              - label: Имя
+                name: namePlaceholder
+                widget: string
+              - label: Email
+                name: emailPlaceholder
+                widget: string
+              - label: Телефон
+                name: phonePlaceholder
+                widget: string
+              - label: Ваш заказ
+                name: msgPlaceholder
+                widget: string
+              - label: PDF сообщение
+                name: pdfMsg
+                widget: string
+              - label: Политика конфиденциальности
+                name: personalData
+                widget: object
+                fields:
+                  - label: Я согласен
+                    name: text
+                    widget: string
+                  - label: политикой
+                    name: linkText
+                    widget: string
+                  - label: Ссылка
+                    name: link
+                    widget: string
+              - label: Кнопка
+                name: button
+                widget: string
+              - label: Ошибка
+                name: errorText
+                widget: string
+              - label: Письмо отправлено
+                name: success
+                widget: object
+                fields:
+                  - label: Заголовок
+                    name: heading
+                    widget: string
+                  - label: Текст
+                    name: text
+                    widget: text
+                  - label: Кнопка
+                    name: button
+                    widget: string
+          - label: Первая секция
+            name: collapsibleOne
+            widget: object
+            fields:
+              - label: Заголовок
+                name: title
+                widget: string
+              - label: Заголовок аренды
+                name: titleForSummary
+                widget: string
+              - label: Фото
+                name: image
+                widget: image
+              - label: Выберие дату
+                name: dateAndTime
+                widget: string
+              - label: Текст цены
+                name: prices
+                widget: markdown
+              - label: Цены
+                name: price
+                widget: object
+                fields:
+                  - label: ПН-ПТ до 18
+                    name: mondayToFriday
+                    widget: string
+                  - label: ПН-ЧТ после 18
+                    name: mondayToThursday
+                    widget: text
+                  - label: Выходные
+                    name: fridayToSunday
+                    widget: string
+                  - label: Минимум часов
+                    name: minTime
+                    widget: string
+                  - label: Работа до
+                    name: workUntil
+                    widget: number
+              - label: Текст картинг
+                name: subText
+                widget: text
+              - label: Дополнительные опции заголовок
+                name: extras
+                widget: string
+              - label: Дополнительные опции
+                name: items
+                widget: list
+                summary: "{{fields.text}}"
+                field:
+                  label: Товар
+                  name: item
+                  widget: object
+                  fields:
+                    - label: Фото
+                      name: image
+                      widget: image
+                    - label: Заголовок
+                      name: heading
+                      widget: string
+                    - label: Текст
+                      name: text
+                      widget: markdown
+                    - label: Количество
+                      name: amountText
+                      widget: string
+                    - label: Максимум
+                      name: max
+                      widget: string
+                      required: false
+                    - label: От
+                      name: from
+                      widget: select
+                      default: { label: "Выкл", value: 'false' }
+                      required: false
+                      options:
+                        - { label: "Выкл", value: 'false' }
+                        - { label: "Вкл", value: 'true' }
+                    - label: Сохранять пропорции фото
+                      name: stretch
+                      widget: select
+                      default: { label: "Выкл", value: 'false' }
+                      required: false
+                      options:
+                        - { label: "Выкл", value: 'false' }
+                        - { label: "Вкл", value: 'true' }
+                    - label: Цена
+                      name: price
+                      widget: string
+                    - label: Скидка от
+                      name: discountFrom
+                      widget: object
+                      required: false
+                      fields:
+                        - label: От
+                          name: from
+                          required: false
+                          widget: number
+                        - label: Цена со скидкой
+                          name: discountPrice
+                          required: false
+                          widget: number
+                        - label: Вкл
+                          name: enabled
+                          widget: select
+                          default: { label: "Выкл", value: 'false' }
+                          required: false
+                          options:
+                            - { label: "Выкл", value: 'false' }
+                            - { label: "Вкл", value: 'true' }
+          - label: Вторая секция
+            name: collapsibleTwo
+            widget: object
+            fields:
+              - label: Заголовок
+                name: title
+                widget: string
+              - label: Заголовок аренды
+                name: titleForSummary
+                widget: string
+              - label: Фото
+                name: image
+                widget: image
+              - label: Выберие дату
+                name: dateAndTime
+                widget: string
+              - label: Текст цены
+                name: prices
+                widget: markdown
+              - label: Цены
+                name: price
+                widget: object
+                fields:
+                  - label: ПН-ПТ до 18
+                    name: mondayToFriday
+                    widget: string
+                  - label: ПН-ЧТ после 18
+                    name: mondayToThursday
+                    widget: text
+                  - label: Выходные
+                    name: fridayToSunday
+                    widget: string
+                  - label: Минимум часов
+                    name: minTime
+                    widget: string
+                  - label: Работа до
+                    name: workUntil
+                    widget: number
+              - label: Условия
+                name: subText
+                widget: text
+          - label: Третья секция
+            name: collapsibleThree
+            widget: object
+            fields:
+              - label: Заголовок
+                name: title
+                widget: string
+              - label: Текст
+                name: text
+                widget: text
+              - label: Заголовок Салаты
+                name: saladsTitle
+                widget: string
+              - label: Салаты
+                name: salads
+                widget: list
+                summary: "{{fields.text}}"
+                field:
+                  label: Товар
+                  name: item
+                  widget: object
+                  fields:
+                    - label: Фото
+                      name: image
+                      widget: image
+                    - label: Заголовок
+                      name: heading
+                      widget: string
+                    - label: Текст
+                      name: text
+                      widget: markdown
+                    - label: Количество
+                      name: amountText
+                      widget: string
+                    - label: Максимум
+                      name: max
+                      widget: string
+                      required: false
+                    - label: От
+                      name: from
+                      widget: select
+                      default: { label: "Выкл", value: 'false' }
+                      required: false
+                      options:
+                        - { label: "Выкл", value: 'false' }
+                        - { label: "Вкл", value: 'true' }
+                    - label: Сохранять пропорции фото
+                      name: stretch
+                      widget: select
+                      default: { label: "Выкл", value: 'false' }
+                      required: false
+                      options:
+                        - { label: "Выкл", value: 'false' }
+                        - { label: "Вкл", value: 'true' }
+                    - label: Цена
+                      name: price
+                      widget: string
+                    - label: Скидка от
+                      name: discountFrom
+                      widget: object
+                      required: false
+                      fields:
+                        - label: От
+                          name: from
+                          required: false
+                          widget: number
+                        - label: Цена со скидкой
+                          name: discountPrice
+                          required: false
+                          widget: number
+                        - label: Вкл
+                          name: enabled
+                          widget: select
+                          default: { label: "Выкл", value: 'false' }
+                          required: false
+                          options:
+                            - { label: "Выкл", value: 'false' }
+                            - { label: "Вкл", value: 'true' }
+              - label: Заголовок Меню
+                name: menuTitle
+                widget: string
+              - label: Подзаголовок Меню
+                name: menuSubitle
+                widget: string
+              - label: Меню
+                name: menu
+                widget: list
+                summary: "{{fields.text}}"
+                field:
+                  label: Товар
+                  name: item
+                  widget: object
+                  fields:
+                    - label: Фото
+                      name: image
+                      widget: image
+                    - label: Заголовок
+                      name: heading
+                      widget: string
+                    - label: Текст
+                      name: text
+                      widget: markdown
+                    - label: Количество
+                      name: amountText
+                      widget: string
+                    - label: Максимум
+                      name: max
+                      widget: string
+                      required: false
+                    - label: От
+                      name: from
+                      widget: select
+                      default: { label: "Выкл", value: 'false' }
+                      required: false
+                      options:
+                        - { label: "Выкл", value: 'false' }
+                        - { label: "Вкл", value: 'true' }
+                    - label: Сохранять пропорции фото
+                      name: stretch
+                      widget: select
+                      default: { label: "Выкл", value: 'false' }
+                      required: false
+                      options:
+                        - { label: "Выкл", value: 'false' }
+                        - { label: "Вкл", value: 'true' }
+                    - label: Цена
+                      name: price
+                      widget: string
+                    - label: Скидка от
+                      name: discountFrom
+                      widget: object
+                      required: false
+                      fields:
+                        - label: От
+                          name: from
+                          required: false
+                          widget: number
+                        - label: Цена со скидкой
+                          name: discountPrice
+                          required: false
+                          widget: number
+                        - label: Вкл
+                          name: enabled
+                          widget: select
+                          default: { label: "Выкл", value: 'false' }
+                          required: false
+                          options:
+                            - { label: "Выкл", value: 'false' }
+                            - { label: "Вкл", value: 'true' }
+              - label: Заголовок Паста
+                name: pastaTitle
+                widget: string
+              - label: Паста
+                name: pasta
+                widget: list
+                summary: "{{fields.text}}"
+                field:
+                  label: Товар
+                  name: item
+                  widget: object
+                  fields:
+                    - label: Фото
+                      name: image
+                      widget: image
+                    - label: Заголовок
+                      name: heading
+                      widget: string
+                    - label: Текст
+                      name: text
+                      widget: markdown
+                    - label: Количество
+                      name: amountText
+                      widget: string
+                    - label: Максимум
+                      name: max
+                      widget: string
+                      required: false
+                    - label: От
+                      name: from
+                      widget: select
+                      default: { label: "Выкл", value: 'false' }
+                      required: false
+                      options:
+                        - { label: "Выкл", value: 'false' }
+                        - { label: "Вкл", value: 'true' }
+                    - label: Сохранять пропорции фото
+                      name: stretch
+                      widget: select
+                      default: { label: "Выкл", value: 'false' }
+                      required: false
+                      options:
+                        - { label: "Выкл", value: 'false' }
+                        - { label: "Вкл", value: 'true' }
+                    - label: Цена
+                      name: price
+                      widget: string
+                    - label: Скидка от
+                      name: discountFrom
+                      widget: object
+                      required: false
+                      fields:
+                        - label: От
+                          name: from
+                          required: false
+                          widget: number
+                        - label: Цена со скидкой
+                          name: discountPrice
+                          required: false
+                          widget: number
+                        - label: Вкл
+                          name: enabled
+                          widget: select
+                          default: { label: "Выкл", value: 'false' }
+                          required: false
+                          options:
+                            - { label: "Выкл", value: 'false' }
+                            - { label: "Вкл", value: 'true' }
+              - label: Заголовок Сэндвичи
+                name: sandwitchTitle
+                widget: string
+              - label: Сэндвичи
+                name: sandwitches
+                widget: list
+                summary: "{{fields.text}}"
+                field:
+                  label: Товар
+                  name: item
+                  widget: object
+                  fields:
+                    - label: Фото
+                      name: image
+                      widget: image
+                    - label: Заголовок
+                      name: heading
+                      widget: string
+                    - label: Текст
+                      name: text
+                      widget: markdown
+                    - label: Количество
+                      name: amountText
+                      widget: string
+                    - label: Максимум
+                      name: max
+                      widget: string
+                      required: false
+                    - label: От
+                      name: from
+                      widget: select
+                      default: { label: "Выкл", value: 'false' }
+                      required: false
+                      options:
+                        - { label: "Выкл", value: 'false' }
+                        - { label: "Вкл", value: 'true' }
+                    - label: Сохранять пропорции фото
+                      name: stretch
+                      widget: select
+                      default: { label: "Выкл", value: 'false' }
+                      required: false
+                      options:
+                        - { label: "Выкл", value: 'false' }
+                        - { label: "Вкл", value: 'true' }
+                    - label: Цена
+                      name: price
+                      widget: string
+                    - label: Скидка от
+                      name: discountFrom
+                      widget: object
+                      required: false
+                      fields:
+                        - label: От
+                          name: from
+                          required: false
+                          widget: number
+                        - label: Цена со скидкой
+                          name: discountPrice
+                          required: false
+                          widget: number
+                        - label: Вкл
+                          name: enabled
+                          widget: select
+                          default: { label: "Выкл", value: 'false' }
+                          required: false
+                          options:
+                            - { label: "Выкл", value: 'false' }
+                            - { label: "Вкл", value: 'true' }
+              - label: Заголовок Горячие закуски
+                name: snacksTitle
+                widget: string
+              - label: Горячие закуски
+                name: snacks
+                widget: list
+                summary: "{{fields.text}}"
+                field:
+                  label: Товар
+                  name: item
+                  widget: object
+                  fields:
+                    - label: Фото
+                      name: image
+                      widget: image
+                    - label: Заголовок
+                      name: heading
+                      widget: string
+                    - label: Текст
+                      name: text
+                      widget: markdown
+                    - label: Количество
+                      name: amountText
+                      widget: string
+                    - label: Максимум
+                      name: max
+                      widget: string
+                      required: false
+                    - label: От
+                      name: from
+                      widget: select
+                      default: { label: "Выкл", value: 'false' }
+                      required: false
+                      options:
+                        - { label: "Выкл", value: 'false' }
+                        - { label: "Вкл", value: 'true' }
+                    - label: Сохранять пропорции фото
+                      name: stretch
+                      widget: select
+                      default: { label: "Выкл", value: 'false' }
+                      required: false
+                      options:
+                        - { label: "Выкл", value: 'false' }
+                        - { label: "Вкл", value: 'true' }
+                    - label: Цена
+                      name: price
+                      widget: string
+                    - label: Скидка от
+                      name: discountFrom
+                      widget: object
+                      required: false
+                      fields:
+                        - label: От
+                          name: from
+                          required: false
+                          widget: number
+                        - label: Цена со скидкой
+                          name: discountPrice
+                          required: false
+                          widget: number
+                        - label: Вкл
+                          name: enabled
+                          widget: select
+                          default: { label: "Выкл", value: 'false' }
+                          required: false
+                          options:
+                            - { label: "Выкл", value: 'false' }
+                            - { label: "Вкл", value: 'true' }
+              - label: Заголовок Горячие блюда из рыбы
+                name: fishTitle
+                widget: string
+              - label: Горячие блюда из рыбы
+                name: fish
+                widget: list
+                summary: "{{fields.text}}"
+                field:
+                  label: Товар
+                  name: item
+                  widget: object
+                  fields:
+                    - label: Фото
+                      name: image
+                      widget: image
+                    - label: Заголовок
+                      name: heading
+                      widget: string
+                    - label: Текст
+                      name: text
+                      widget: markdown
+                    - label: Количество
+                      name: amountText
+                      widget: string
+                    - label: Максимум
+                      name: max
+                      widget: string
+                      required: false
+                    - label: От
+                      name: from
+                      widget: select
+                      default: { label: "Выкл", value: 'false' }
+                      required: false
+                      options:
+                        - { label: "Выкл", value: 'false' }
+                        - { label: "Вкл", value: 'true' }
+                    - label: Сохранять пропорции фото
+                      name: stretch
+                      widget: select
+                      default: { label: "Выкл", value: 'false' }
+                      required: false
+                      options:
+                        - { label: "Выкл", value: 'false' }
+                        - { label: "Вкл", value: 'true' }
+                    - label: Цена
+                      name: price
+                      widget: string
+                    - label: Скидка от
+                      name: discountFrom
+                      widget: object
+                      required: false
+                      fields:
+                        - label: От
+                          name: from
+                          required: false
+                          widget: number
+                        - label: Цена со скидкой
+                          name: discountPrice
+                          required: false
+                          widget: number
+                        - label: Вкл
+                          name: enabled
+                          widget: select
+                          default: { label: "Выкл", value: 'false' }
+                          required: false
+                          options:
+                            - { label: "Выкл", value: 'false' }
+                            - { label: "Вкл", value: 'true' }
+              - label: Заголовок Горячие блюда из мяса и птицы
+                name: meatTitle
+                widget: string
+              - label: Горячие блюда из мяса и птицы
+                name: meat
+                widget: list
+                summary: "{{fields.text}}"
+                field:
+                  label: Товар
+                  name: item
+                  widget: object
+                  fields:
+                    - label: Фото
+                      name: image
+                      widget: image
+                    - label: Заголовок
+                      name: heading
+                      widget: string
+                    - label: Текст
+                      name: text
+                      widget: markdown
+                    - label: Количество
+                      name: amountText
+                      widget: string
+                    - label: Максимум
+                      name: max
+                      widget: string
+                      required: false
+                    - label: От
+                      name: from
+                      widget: select
+                      default: { label: "Выкл", value: 'false' }
+                      required: false
+                      options:
+                        - { label: "Выкл", value: 'false' }
+                        - { label: "Вкл", value: 'true' }
+                    - label: Сохранять пропорции фото
+                      name: stretch
+                      widget: select
+                      default: { label: "Выкл", value: 'false' }
+                      required: false
+                      options:
+                        - { label: "Выкл", value: 'false' }
+                        - { label: "Вкл", value: 'true' }
+                    - label: Цена
+                      name: price
+                      widget: string
+                    - label: Скидка от
+                      name: discountFrom
+                      widget: object
+                      required: false
+                      fields:
+                        - label: От
+                          name: from
+                          required: false
+                          widget: number
+                        - label: Цена со скидкой
+                          name: discountPrice
+                          required: false
+                          widget: number
+                        - label: Вкл
+                          name: enabled
+                          widget: select
+                          default: { label: "Выкл", value: 'false' }
+                          required: false
+                          options:
+                            - { label: "Выкл", value: 'false' }
+                            - { label: "Вкл", value: 'true' }
+              - label: Заголовок Гарниры
+                name: sidesTitle
+                widget: string
+              - label: Гарниры
+                name: sides
+                widget: list
+                summary: "{{fields.text}}"
+                field:
+                  label: Товар
+                  name: item
+                  widget: object
+                  fields:
+                    - label: Фото
+                      name: image
+                      widget: image
+                    - label: Заголовок
+                      name: heading
+                      widget: string
+                    - label: Текст
+                      name: text
+                      widget: markdown
+                    - label: Количество
+                      name: amountText
+                      widget: string
+                    - label: Максимум
+                      name: max
+                      widget: string
+                      required: false
+                    - label: От
+                      name: from
+                      widget: select
+                      default: { label: "Выкл", value: 'false' }
+                      required: false
+                      options:
+                        - { label: "Выкл", value: 'false' }
+                        - { label: "Вкл", value: 'true' }
+                    - label: Сохранять пропорции фото
+                      name: stretch
+                      widget: select
+                      default: { label: "Выкл", value: 'false' }
+                      required: false
+                      options:
+                        - { label: "Выкл", value: 'false' }
+                        - { label: "Вкл", value: 'true' }
+                    - label: Цена
+                      name: price
+                      widget: string
+                    - label: Скидка от
+                      name: discountFrom
+                      widget: object
+                      required: false
+                      fields:
+                        - label: От
+                          name: from
+                          required: false
+                          widget: number
+                        - label: Цена со скидкой
+                          name: discountPrice
+                          required: false
+                          widget: number
+                        - label: Вкл
+                          name: enabled
+                          widget: select
+                          default: { label: "Выкл", value: 'false' }
+                          required: false
+                          options:
+                            - { label: "Выкл", value: 'false' }
+                            - { label: "Вкл", value: 'true' }
+              - label: Заголовок Соусы
+                name: sausesTitle
+                widget: string
+              - label: Соусы
+                name: sauses
+                widget: list
+                summary: "{{fields.text}}"
+                field:
+                  label: Товар
+                  name: item
+                  widget: object
+                  fields:
+                    - label: Фото
+                      name: image
+                      widget: image
+                    - label: Заголовок
+                      name: heading
+                      widget: string
+                    - label: Текст
+                      name: text
+                      widget: markdown
+                    - label: Количество
+                      name: amountText
+                      widget: string
+                    - label: Максимум
+                      name: max
+                      widget: string
+                      required: false
+                    - label: От
+                      name: from
+                      widget: select
+                      default: { label: "Выкл", value: 'false' }
+                      required: false
+                      options:
+                        - { label: "Выкл", value: 'false' }
+                        - { label: "Вкл", value: 'true' }
+                    - label: Сохранять пропорции фото
+                      name: stretch
+                      widget: select
+                      default: { label: "Выкл", value: 'false' }
+                      required: false
+                      options:
+                        - { label: "Выкл", value: 'false' }
+                        - { label: "Вкл", value: 'true' }
+                    - label: Цена
+                      name: price
+                      widget: string
+                    - label: Скидка от
+                      name: discountFrom
+                      widget: object
+                      required: false
+                      fields:
+                        - label: От
+                          name: from
+                          required: false
+                          widget: number
+                        - label: Цена со скидкой
+                          name: discountPrice
+                          required: false
+                          widget: number
+                        - label: Вкл
+                          name: enabled
+                          widget: select
+                          default: { label: "Выкл", value: 'false' }
+                          required: false
+                          options:
+                            - { label: "Выкл", value: 'false' }
+                            - { label: "Вкл", value: 'true' }
+              - label: Заголовок Пицца и хлеб
+                name: breadTitle
+                widget: string
+              - label: Пицца и хлеб
+                name: bread
+                widget: list
+                summary: "{{fields.text}}"
+                field:
+                  label: Товар
+                  name: item
+                  widget: object
+                  fields:
+                    - label: Фото
+                      name: image
+                      widget: image
+                    - label: Заголовок
+                      name: heading
+                      widget: string
+                    - label: Текст
+                      name: text
+                      widget: markdown
+                    - label: Количество
+                      name: amountText
+                      widget: string
+                    - label: Максимум
+                      name: max
+                      widget: string
+                      required: false
+                    - label: От
+                      name: from
+                      widget: select
+                      default: { label: "Выкл", value: 'false' }
+                      required: false
+                      options:
+                        - { label: "Выкл", value: 'false' }
+                        - { label: "Вкл", value: 'true' }
+                    - label: Сохранять пропорции фото
+                      name: stretch
+                      widget: select
+                      default: { label: "Выкл", value: 'false' }
+                      required: false
+                      options:
+                        - { label: "Выкл", value: 'false' }
+                        - { label: "Вкл", value: 'true' }
+                    - label: Цена
+                      name: price
+                      widget: string
+                    - label: Скидка от
+                      name: discountFrom
+                      widget: object
+                      required: false
+                      fields:
+                        - label: От
+                          name: from
+                          required: false
+                          widget: number
+                        - label: Цена со скидкой
+                          name: discountPrice
+                          required: false
+                          widget: number
+                        - label: Вкл
+                          name: enabled
+                          widget: select
+                          default: { label: "Выкл", value: 'false' }
+                          required: false
+                          options:
+                            - { label: "Выкл", value: 'false' }
+                            - { label: "Вкл", value: 'true' }
+              - label: Заголовок Десерт
+                name: desertTitle
+                widget: string
+              - label: Десерт
+                name: desert
+                widget: list
+                summary: "{{fields.text}}"
+                field:
+                  label: Товар
+                  name: item
+                  widget: object
+                  fields:
+                    - label: Фото
+                      name: image
+                      widget: image
+                    - label: Заголовок
+                      name: heading
+                      widget: string
+                    - label: Текст
+                      name: text
+                      widget: markdown
+                    - label: Количество
+                      name: amountText
+                      widget: string
+                    - label: Максимум
+                      name: max
+                      widget: string
+                      required: false
+                    - label: От
+                      name: from
+                      widget: select
+                      default: { label: "Выкл", value: 'false' }
+                      required: false
+                      options:
+                        - { label: "Выкл", value: 'false' }
+                        - { label: "Вкл", value: 'true' }
+                    - label: Сохранять пропорции фото
+                      name: stretch
+                      widget: select
+                      default: { label: "Выкл", value: 'false' }
+                      required: false
+                      options:
+                        - { label: "Выкл", value: 'false' }
+                        - { label: "Вкл", value: 'true' }
+                    - label: Цена
+                      name: price
+                      widget: string
+                    - label: Скидка от
+                      name: discountFrom
+                      widget: object
+                      required: false
+                      fields:
+                        - label: От
+                          name: from
+                          required: false
+                          widget: number
+                        - label: Цена со скидкой
+                          name: discountPrice
+                          required: false
+                          widget: number
+                        - label: Вкл
+                          name: enabled
+                          widget: select
+                          default: { label: "Выкл", value: 'false' }
+                          required: false
+                          options:
+                            - { label: "Выкл", value: 'false' }
+                            - { label: "Вкл", value: 'true' }
+              # - label: Заголовок Барные закуски
+              #   name: barTitle
+              #   widget: string
+              # - label: Барные закуски
+              #   name: bar
+              #   widget: list
+              #   summary: "{{fields.text}}"
+              #   field:
+              #     label: Товар
+              #     name: item
+              #     widget: object
+              #     fields:
+              #       - label: Фото
+              #         name: image
+              #         widget: image
+              #       - label: Заголовок
+              #         name: heading
+              #         widget: string
+              #       - label: Текст
+              #         name: text
+              #         widget: markdown
+              #       - label: Количество
+              #         name: amountText
+              #         widget: string
+              #       - label: Максимум
+              #         name: max
+              #         widget: string
+              #         required: false
+              #       - label: От
+              #         name: from
+              #         widget: select
+              #         default: { label: "Выкл", value: 'false' }
+              #         required: false
+              #         options:
+              #           - { label: "Выкл", value: 'false' }
+              #           - { label: "Вкл", value: 'true' }
+              #       - label: Сохранять пропорции фото
+              #         name: stretch
+              #         widget: select
+              #         default: { label: "Выкл", value: 'false' }
+              #         required: false
+              #         options:
+              #           - { label: "Выкл", value: 'false' }
+              #           - { label: "Вкл", value: 'true' }
+              #       - label: Цена
+              #         name: price
+              #         widget: string
+              - label: Заголовок Напитки б/а
+                name: drinksTitle
+                widget: string
+              - label: Напитки б/а
+                name: drinks
+                widget: list
+                summary: "{{fields.text}}"
+                field:
+                  label: Товар
+                  name: item
+                  widget: object
+                  fields:
+                    - label: Фото
+                      name: image
+                      widget: image
+                    - label: Заголовок
+                      name: heading
+                      widget: string
+                    - label: Текст
+                      name: text
+                      widget: markdown
+                    - label: Количество
+                      name: amountText
+                      widget: string
+                    - label: Максимум
+                      name: max
+                      widget: string
+                      required: false
+                    - label: От
+                      name: from
+                      widget: select
+                      default: { label: "Выкл", value: 'false' }
+                      required: false
+                      options:
+                        - { label: "Выкл", value: 'false' }
+                        - { label: "Вкл", value: 'true' }
+                    - label: Сохранять пропорции фото
+                      name: stretch
+                      widget: select
+                      default: { label: "Выкл", value: 'false' }
+                      required: false
+                      options:
+                        - { label: "Выкл", value: 'false' }
+                        - { label: "Вкл", value: 'true' }
+                    - label: Цена
+                      name: price
+                      widget: string
+                    - label: Скидка от
+                      name: discountFrom
+                      widget: object
+                      required: false
+                      fields:
+                        - label: От
+                          name: from
+                          required: false
+                          widget: number
+                        - label: Цена со скидкой
+                          name: discountPrice
+                          required: false
+                          widget: number
+                        - label: Вкл
+                          name: enabled
+                          widget: select
+                          default: { label: "Выкл", value: 'false' }
+                          required: false
+                          options:
+                            - { label: "Выкл", value: 'false' }
+                            - { label: "Вкл", value: 'true' }
+              - label: Заголовок Пиво разливное
+                name: beerTitle
+                widget: string
+              - label: Пиво разливное
+                name: beer
+                widget: list
+                summary: "{{fields.text}}"
+                field:
+                  label: Товар
+                  name: item
+                  widget: object
+                  fields:
+                    - label: Фото
+                      name: image
+                      widget: image
+                    - label: Заголовок
+                      name: heading
+                      widget: string
+                    - label: Текст
+                      name: text
+                      widget: markdown
+                    - label: Количество
+                      name: amountText
+                      widget: string
+                    - label: Максимум
+                      name: max
+                      widget: string
+                      required: false
+                    - label: От
+                      name: from
+                      widget: select
+                      default: { label: "Выкл", value: 'false' }
+                      required: false
+                      options:
+                        - { label: "Выкл", value: 'false' }
+                        - { label: "Вкл", value: 'true' }
+                    - label: Сохранять пропорции фото
+                      name: stretch
+                      widget: select
+                      default: { label: "Выкл", value: 'false' }
+                      required: false
+                      options:
+                        - { label: "Выкл", value: 'false' }
+                        - { label: "Вкл", value: 'true' }
+                    - label: Цена
+                      name: price
+                      widget: string
+                    - label: Скидка от
+                      name: discountFrom
+                      widget: object
+                      required: false
+                      fields:
+                        - label: От
+                          name: from
+                          required: false
+                          widget: number
+                        - label: Цена со скидкой
+                          name: discountPrice
+                          required: false
+                          widget: number
+                        - label: Вкл
+                          name: enabled
+                          widget: select
+                          default: { label: "Выкл", value: 'false' }
+                          required: false
+                          options:
+                            - { label: "Выкл", value: 'false' }
+                            - { label: "Вкл", value: 'true' }
+              - label: Заголовок Пиво бутылочное
+                name: beerBottleTitle
+                widget: string
+              - label: Пиво бутылочное
+                name: beerBottle
+                widget: list
+                summary: "{{fields.text}}"
+                field:
+                  label: Товар
+                  name: item
+                  widget: object
+                  fields:
+                    - label: Фото
+                      name: image
+                      widget: image
+                    - label: Заголовок
+                      name: heading
+                      widget: string
+                    - label: Текст
+                      name: text
+                      widget: markdown
+                    - label: Количество
+                      name: amountText
+                      widget: string
+                    - label: Максимум
+                      name: max
+                      widget: string
+                      required: false
+                    - label: От
+                      name: from
+                      widget: select
+                      default: { label: "Выкл", value: 'false' }
+                      required: false
+                      options:
+                        - { label: "Выкл", value: 'false' }
+                        - { label: "Вкл", value: 'true' }
+                    - label: Сохранять пропорции фото
+                      name: stretch
+                      widget: select
+                      default: { label: "Выкл", value: 'false' }
+                      required: false
+                      options:
+                        - { label: "Выкл", value: 'false' }
+                        - { label: "Вкл", value: 'true' }
+                    - label: Цена
+                      name: price
+                      widget: string
+                    - label: Скидка от
+                      name: discountFrom
+                      widget: object
+                      required: false
+                      fields:
+                        - label: От
+                          name: from
+                          required: false
+                          widget: number
+                        - label: Цена со скидкой
+                          name: discountPrice
+                          required: false
+                          widget: number
+                        - label: Вкл
+                          name: enabled
+                          widget: select
+                          default: { label: "Выкл", value: 'false' }
+                          required: false
+                          options:
+                            - { label: "Выкл", value: 'false' }
+                            - { label: "Вкл", value: 'true' }
+              - label: Заголовок Чай, кофе
+                name: teaTitle
+                widget: string
+              - label: Чай, кофе
+                name: tea
+                widget: list
+                summary: "{{fields.text}}"
+                field:
+                  label: Товар
+                  name: item
+                  widget: object
+                  fields:
+                    - label: Фото
+                      name: image
+                      widget: image
+                    - label: Заголовок
+                      name: heading
+                      widget: string
+                    - label: Текст
+                      name: text
+                      widget: markdown
+                    - label: Количество
+                      name: amountText
+                      widget: string
+                    - label: Максимум
+                      name: max
+                      widget: string
+                      required: false
+                    - label: От
+                      name: from
+                      widget: select
+                      default: { label: "Выкл", value: 'false' }
+                      required: false
+                      options:
+                        - { label: "Выкл", value: 'false' }
+                        - { label: "Вкл", value: 'true' }
+                    - label: Сохранять пропорции фото
+                      name: stretch
+                      widget: select
+                      default: { label: "Выкл", value: 'false' }
+                      required: false
+                      options:
+                        - { label: "Выкл", value: 'false' }
+                        - { label: "Вкл", value: 'true' }
+                    - label: Цена
+                      name: price
+                      widget: string
+                    - label: Скидка от
+                      name: discountFrom
+                      widget: object
+                      required: false
+                      fields:
+                        - label: От
+                          name: from
+                          required: false
+                          widget: number
+                        - label: Цена со скидкой
+                          name: discountPrice
+                          required: false
+                          widget: number
+                        - label: Вкл
+                          name: enabled
+                          widget: select
+                          default: { label: "Выкл", value: 'false' }
+                          required: false
+                          options:
+                            - { label: "Выкл", value: 'false' }
+                            - { label: "Вкл", value: 'true' }
+              - label: Заголовок Дополнительные опции
+                name: extrasTitle
+                widget: string
+              - label: Дополнительные опции
+                name: extrasOpt
+                widget: list
+                summary: "{{fields.text}}"
+                field:
+                  label: Товар
+                  name: item
+                  widget: object
+                  fields:
+                    - label: Фото
+                      name: image
+                      widget: image
+                    - label: Заголовок
+                      name: heading
+                      widget: string
+                    - label: Текст
+                      name: text
+                      widget: markdown
+                    - label: Цена
+                      name: price
+                      widget: string
+              - label: Заголовок аренда зала
+                name: hallTitle
+                widget: string
+              - label: Подзаголовок аренда зала
+                name: hallSubtitle
+                widget: string
+              - label: Аренда зала
+                name: hall
+                widget: list
+                summary: "{{fields.text}}"
+                field:
+                  label: Товар
+                  name: item
+                  widget: object
+                  fields:
+                    - label: Фото
+                      name: image
+                      widget: image
+                    - label: Видео
+                      name: video
+                      widget: file
+                      required: false
+                    - label: Заголовок
+                      name: heading
+                      widget: string
+                    - label: Текст
+                      name: text
+                      widget: markdown
+      - label: 'VR Arena'
+        name: 'VR Arena'
+        file: cms/pages/vr.json
+        fields:
+          - label: Описание
+            name: description
+            required: false
+            widget: text
+          - label: Титул
+            name: title
+            widget: string
+          - label: Заставка
+            name: bg
+            widget: object
+            fields:
+              - label: Дексктоп
+                name: desktop
+                widget: image
+              - label: Мобилка
+                name: mobile
+                widget: image
+          - label: Лого
+            name: logo
+            widget: image
+          - label: Пункты
+            name: items
+            widget: list
+            summary: "{{fields.text}}"
+            field:
+              label: Пункт
+              name: item
+              widget: object
+              fields:
+                - label: Иконка
+                  name: image
+                  widget: image
+                - label: Текст
+                  name: text
+                  widget: text
+          - label: Заголовок
+            name: headingOne
+            widget: string
+          - label: Колонка 1
+            name: colOne
+            widget: object
+            fields:
+              - label: Заголовок
+                name: heading
+                widget: text
+              - label: Время
+                name: items
+                widget: list
+                summary: "{{fields.items.items}}"
+                field:
+                  label: Время
+                  name: items
+                  widget: text
+          - label: Колонка 2
+            name: colTwo
+            widget: object
+            fields:
+              - label: Заголовок
+                name: heading
+                widget: text
+              - label: Цены
+                name: items
+                widget: list
+                summary: "{{fields.items.items}}"
+                field:
+                  label: Цена
+                  name: items
+                  widget: text
+          - label: Колонка 3
+            name: colThree
+            widget: object
+            fields:
+              - label: Заголовок
+                name: heading
+                widget: text
+              - label: Цены
+                name: items
+                widget: list
+                summary: "{{fields.items.items}}"
+                field:
+                  label: Цена
+                  name: items
+                  widget: text
+          - label: Колонка 4
+            name: colFour
+            widget: object
+            fields:
+              - label: Заголовок
+                name: heading
+                widget: text
+              - label: Цены
+                name: items
+                widget: list
+                summary: "{{fields.items.items}}"
+                field:
+                  label: Цена
+                  name: items
+                  widget: text
+          - label: Колонка 5
+            name: colFive
+            widget: object
+            fields:
+              - label: Заголовок
+                name: heading
+                widget: text
+              - label: Текст кнопки
+                name: buttonText
+                widget: string
+              - label: Цены
+                name: items
+                widget: list
+                summary: "{{fields.items.items}}"
+                field:
+                  label: Цена
+                  name: items
+                  widget: text
+          - label: Дисклеймер
+            name: disclaimer
+            widget: text
+          - label: Текст 1
+            name: textOne
+            widget: text
+          - label: Текст 2
+            name: textTwo
+            widget: text
+          - label: Фото 1
+            name: imageOne
+            widget: image
+          - label: Пункты 2
+            name: pointsOne
+            widget: list
+            summary: "{{fields.text}}"
+            field:
+              label: Пункт
+              name: item
+              widget: object
+              fields:
+                - label: Иконка
+                  name: image
+                  widget: image
+                - label: Текст
+                  name: text
+                  widget: text
+          - label: Заголовок 2
+            name: headingTwo
+            widget: string
+          - label: Игры
+            name: pointsTwo
+            widget: list
+            summary: "{{fields.text}}"
+            field:
+              label: Игра
+              name: item
+              widget: object
+              fields:
+                - label: Фото
+                  name: image
+                  widget: image
+                - label: Ссылка на видео
+                  name: ytLink
+                  widget: string
+                - label: Заголовок
+                  name: heading
+                  widget: string
+                - label: Возрастное ограничение
+                  name: ageRating
+                  required: false
+                  widget: string
+                - label: Текст 1
+                  name: textOne
+                  required: false
+                  widget: text
+                - label: Заголовок 2
+                  name: headingTwo
+                  widget: string
+                - label: Текст 2
+                  name: textTwo
+                  widget: text
+          - label: Лого маленькое
+            name: logoSmall
+            widget: image
+          - label: Социальные сети
+            name: socialOne
+            widget: list
+            summary: "{{fields.text}}"
+            field:
+              label: Соц. сеть
+              name: item
+              widget: object
+              fields:
+                - label: Иконка
+                  name: image
+                  widget: image
+                - label: Ссылка
+                  name: link
+                  widget: string
+          - label: Заголовок 3
+            name: headingThree
+            widget: text
+          - label: Телефон
+            name: tel
+            widget: string
+          - label: Заголовок 4
+            name: headingFour
+            widget: string
+          - label: Записаться
+            name: bookButton
+            widget: string
+          - label: Галерея
+            name: pointsThree
+            widget: list
+            summary: "{{fields.text}}"
+            field:
+              label: Фото
+              name: item
+              widget: object
+              fields:
+                - label: Фото
+                  name: image
+                  widget: image
+                - label: Заголовок
+                  name: heading
+                  widget: string
+                - label: Текст
+                  name: text
+                  widget: string
+          - label: Подвал
+            name: copyright
+            widget: object
+            fields:
+              - label: Микс
+                name: miks
+                widget: string
+              - label: Права
+                name: rights
+                widget: string
+      - label: '404'
+        name: '404'
+        file: cms/pages/404.json
+        fields:
+          - label: Описание
+            name: description
+            required: false
+            widget: text
+          - label: Титул
+            name: title
+            widget: string
+          - label: Заголовок
+            name: headingOne
+            widget: string
+          - label: Текст
+            name: textOne
+            widget: text
