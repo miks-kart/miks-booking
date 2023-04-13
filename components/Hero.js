@@ -13,7 +13,7 @@ export default function Hero({ data }) {
             <img
               src={data.disclaimer.qrcode}
               alt=""
-              className="rounded-[4.8%] w-full"
+              className="rounded-[4.8%] w-full aspect-square"
             />
           </div>
           <svg
@@ -56,7 +56,7 @@ export default function Hero({ data }) {
           <img
             src={data.disclaimer.qrcode}
             alt=""
-            className="rounded-[4.8%] w-full"
+            className="rounded-[4.8%] w-full aspect-square"
           />
         </div>
       </div>
