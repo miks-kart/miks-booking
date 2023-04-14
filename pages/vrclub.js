@@ -9,7 +9,7 @@ export default function Index({ data }) {
         id="bukza-script"
         afterInteractive
         src={
-          "https://public.bukza.com/api/script/generate/24391/24486/BukzaContainer24486?t=" +
+          "https://public.bukza.com/api/script/generate/24391/24550/BukzaContainer24550?t=" +
           new Date().getTime()
         }
       />
@@ -17,7 +17,7 @@ export default function Index({ data }) {
         id="bukza-script2"
         afterInteractive
         src={
-          "https://public.bukza.com/api/script/generate/24391/24549/BukzaContainer24549?t=" +
+          "https://public.bukza.com/api/script/generate/24391/24486/BukzaContainer24486?t=" +
           new Date().getTime()
         }
       />
@@ -25,7 +25,7 @@ export default function Index({ data }) {
         id="bukza-script3"
         afterInteractive
         src={
-          "https://public.bukza.com/api/script/generate/24391/24550/BukzaContainer24550?t=" +
+          "https://public.bukza.com/api/script/generate/24391/24549/BukzaContainer24549?t=" +
           new Date().getTime()
         }
       />

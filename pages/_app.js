@@ -39,9 +39,9 @@ function App({ Component, pageProps }) {
         <Header data={pageProps.header} />
         <HeaderPlaceholder data={pageProps.header} />
         <HeaderPlaceholderSmall ref={target} data={pageProps.header} />
+        <div className="relative z-50" id="BukzaContainer24550"></div>
         <div className="relative z-50" id="BukzaContainer24486"></div>
         <div className="relative z-50" id="BukzaContainer24549"></div>
-        <div className="relative z-50" id="BukzaContainer24550"></div>
 
         <Component {...pageProps} />
       </main>

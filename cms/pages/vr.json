@@ -66,11 +66,7 @@
   },
   "colFour": {
     "heading": "Аренда**\nДо 10 человек\n40 минут",
-    "items": [
-      "12000₽",
-      "14000₽",
-      "18000₽"
-    ]
+    "items": ["12000₽", "14000₽", "18000₽"]
   },
   "copyright": {
     "miks": "MIKS Karting",
@@ -156,18 +152,14 @@
   "imageOne": "/images/vr_o.png",
   "colTwo": {
     "heading": "Цена за 1 игрока*\n15 минут",
-    "items": [
-      "800₽",
-      "1000₽",
-      "1100₽"
-    ]
+    "items": ["800₽", "1000₽", "1100₽"]
   },
   "colFive": {
     "heading": "Online-бронировние",
     "buttonText": "Записаться",
     "items": [
-      "#BukzaContainer24486",
       "#BukzaContainer24549",
+      "#BukzaContainer24860",
       "#BukzaContainer24550"
     ]
   },
@@ -252,11 +244,7 @@
   "logoSmall": "/images/head.svg",
   "colThree": {
     "heading": "Цена за 1 игрока*\n40 минут",
-    "items": [
-      "1400₽",
-      "1600₽",
-      "2000₽"
-    ]
+    "items": ["1400₽", "1600₽", "2000₽"]
   },
   "textTwo": "Инструктаж не входит в игровое время.\nВсем участникам необходимо быть на площадке за 20 минут до начала игры."
 }

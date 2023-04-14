@@ -116,17 +116,12 @@ const Header = forwardRef(function Header({ data }, ref) {
             </div>
             <div className="items-center justify-around flex-1 hidden lg:flex">
               {data.links.slice(3).map(({ item }) => (
-                <a
-                  target="_blank"
+                <HeaderLink
+                  isSmall={isSmall}
+                  router={router}
                   key={item.link}
-                  href={item.link}
-                  rel="noreferrer"
-                  className={`${
-                    isSmall ? "md:!text-sm" : ""
-                  } inline text-xs md:text-base xl:text-lg text-white duration-200 opacity-70 active:opacity-100 hover:opacity-100 px-[0.625rem]`}
-                >
-                  {item.title}
-                </a>
+                  item={item}
+                />
               ))}
             </div>
           </div>
@@ -186,8 +181,8 @@ function HeaderLink({ item, router, isSmall }) {
           ? "bg-primary-red !opacity-100 rounded-md"
           : ""
       } ${
-        isSmall ? "md:!text-sm px-5" : "px-6 "
-      } inline text-xs md:text-base xl:text-lg py-1 text-white duration-200 opacity-70 active:opacity-100 hover:opacity-100 `}
+        isSmall ? "md:!text-sm px-5" : "px-3 "
+      } inline text-xs md:text-base xl:text-lg py-1 text-white duration-200 opacity-70 active:opacity-100 hover:opacity-100 text-center`}
     >
       {item.title}
     </a>
@@ -195,12 +190,12 @@ function HeaderLink({ item, router, isSmall }) {
     <Link
       href={item.link}
       className={`${
-        router.pathname.slice(1) === item.link
+        router.pathname.slice(1) === item.link || router.pathname === item.link
           ? "bg-primary-red !opacity-100 rounded-md"
           : ""
       } ${
-        isSmall ? "md:!text-sm px-5" : "px-6 "
-      } inline text-xs md:text-base xl:text-lg py-1 text-white duration-200 opacity-70 active:opacity-100 hover:opacity-100 `}
+        isSmall ? "md:!text-sm px-5" : "px-3 "
+      } inline text-xs md:text-base xl:text-lg py-1 text-white duration-200 opacity-70 active:opacity-100 hover:opacity-100 text-center`}
     >
       {item.title}
     </Link>
