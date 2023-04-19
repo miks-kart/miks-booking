@@ -9,7 +9,7 @@ export default function Index({ data }) {
         id="bukza-script"
         afterInteractive
         src={
-          "https://public.bukza.com/api/script/generate/24391/24550/BukzaContainer24550?t=" +
+          "https://public.bukza.com/api/script/generate/25145/24860/BukzaContainer24860?t=" +
           new Date().getTime()
         }
       />
@@ -17,7 +17,7 @@ export default function Index({ data }) {
         id="bukza-script2"
         afterInteractive
         src={
-          "https://public.bukza.com/api/script/generate/24391/24486/BukzaContainer24486?t=" +
+          "https://public.bukza.com/api/script/generate/25145/24861/BukzaContainer24861?t=" +
           new Date().getTime()
         }
       />
@@ -25,7 +25,7 @@ export default function Index({ data }) {
         id="bukza-script3"
         afterInteractive
         src={
-          "https://public.bukza.com/api/script/generate/24391/24549/BukzaContainer24549?t=" +
+          "https://public.bukza.com/api/script/generate/25145/24852/BukzaContainer24852?t=" +
           new Date().getTime()
         }
       />
@@ -41,7 +41,7 @@ export default function Index({ data }) {
           className="absolute top-0 left-0 w-screen h-auto pointer-events-none md:hidden"
         />
       </div>
-      <section className="relative z-10 page-container md:!pb-0 !space-y-6 pt-16 md:!pt-24 text-white">
+      <section className="relative z-10 page-container  vr lg:px-5 md:!pb-0 !space-y-6 pt-16 md:!pt-24 text-white">
         <img
           src={data.logo}
           alt="logo"
@@ -358,13 +358,13 @@ export default function Index({ data }) {
           </div>
         </div>
       </section>
-      <section className="relative z-20 page-container !w-full md:!w-[95%] xl:!w-[90%] md:!pb-0 !pb-0 !space-y-4 !pt-4 md:pt-16 overflow-hidden">
+      <section className="relative z-20 page-container vr !w-full md:!w-[95%] xl:!w-[90%] md:!pb-0 !pb-0 !space-y-4 !pt-4 md:pt-16 overflow-hidden">
         <h2 className="font-display text-[1.75rem] text-center text-white leading-none md:pt-24 pb-0 md:pb-4">
           {data.headingTwo}
         </h2>
         <Slider data={data} />
       </section>
-      <section className="relative z-10 page-container md:!pb-16 !space-y-6 !pt-0 text-white">
+      <section className="relative z-10 page-container vr lg:px-5 md:!pb-16 !space-y-6 !pt-0 text-white">
         <div className="flex flex-col items-center justify-between pt-16 md:flex-row">
           <div className="flex items-center">
             <div className="relative logo-small">
@@ -440,7 +440,7 @@ export default function Index({ data }) {
         </div>
       </section>
       <Gallery images={data.pointsThree} />
-      <footer className="flex bg-[#18191A] items-center justify-between text-white !space-y-0 !py-[0.625rem] text-xs page-container">
+      <footer className="flex bg-[#18191A] items-center justify-between text-white !space-y-0 !py-[0.625rem] text-xs page-container vr">
         <p className="">{`© 2000 - ${new Date().getFullYear()} ${
           data.copyright.miks
         }`}</p>

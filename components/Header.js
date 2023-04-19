@@ -78,8 +78,8 @@ const Header = forwardRef(function Header({ data }, ref) {
           </a>
         </div>
         <header className="bg-[#222629]">
-          <div className="page-container !py-[0.4375rem] lg:px-5 !space-y-0 flex lg:justify-center justify-between items-center">
-            <div className="items-center justify-around flex-1 hidden lg:flex">
+          <div className="page-container  !py-[0.4375rem] lg:!px-0 !space-y-0 flex lg:justify-center justify-between items-center">
+            <ul className="items-center flex-1 hidden justify-items-start lg:flex">
               {data.links.slice(0, 3).map(({ item }) => (
                 <HeaderLink
                   isSmall={isSmall}
@@ -88,12 +88,12 @@ const Header = forwardRef(function Header({ data }, ref) {
                   item={item}
                 />
               ))}
-            </div>
+            </ul>
             <a
-              target="_blank"
+              // target="_blank"
               href={data.logo.link}
               rel="noreferrer"
-              className="font-sans text-sm text-center text-white underline lg:mx-16"
+              className="font-sans text-sm text-center text-white underline"
             >
               <img
                 src={data.logo.image}
@@ -105,7 +105,7 @@ const Header = forwardRef(function Header({ data }, ref) {
             </a>
             <div className="relative z-50 flex lg:hidden">
               <a
-                target="_blank"
+                // target="_blank"
                 href={data.booking.link}
                 rel="noreferrer"
                 className="rounded-md font-medium mr-4 my-auto text-[0.625rem] text-white bg-primary-red p-2"
@@ -114,7 +114,7 @@ const Header = forwardRef(function Header({ data }, ref) {
               </a>
               <MobileMenuToggle isOpen={isOpen} onClick={() => toggleNav()} />
             </div>
-            <div className="items-center justify-around flex-1 hidden lg:flex">
+            <ul className="items-center justify-end flex-1 hidden lg:flex">
               {data.links.slice(3).map(({ item }) => (
                 <HeaderLink
                   isSmall={isSmall}
@@ -123,10 +123,10 @@ const Header = forwardRef(function Header({ data }, ref) {
                   item={item}
                 />
               ))}
-            </div>
+            </ul>
           </div>
         </header>
-        <div className="page-container lg:flex hidden !space-y-0 !py-0  justify-between items-start">
+        <div className="page-container wide lg:flex hidden !space-y-0 !py-0  justify-between items-start">
           <div className="flex-1 invisible w-1 h-1"></div>
           <div className="w-[31.25rem] px-5 py-[0.1875rem] justify-self-center text-sm bg-primary-red  justify-center items-center rounded-b-[0.9375rem] hidden lg:flex">
             {data.linksTwo.map(({ item }) => (
@@ -147,7 +147,7 @@ const Header = forwardRef(function Header({ data }, ref) {
             <div
               className={`${
                 isSmall ? "pb-1" : "pb-0"
-              } duration-200 lg:table hidden ml-auto bg-primary-red rounded-b-[0.9375rem] `}
+              } duration-200 mr-2 lg:table hidden ml-auto bg-primary-red rounded-b-[0.9375rem] `}
             >
               <a
                 target="_blank"
@@ -172,32 +172,37 @@ export default Header;
 
 function HeaderLink({ item, router, isSmall }) {
   return item.link.includes("http") ? (
-    <a
-      target="_blank"
-      href={item.link}
-      rel="noreferrer"
-      className={`${
-        router.pathname.slice(1) === item.link
-          ? "bg-primary-red !opacity-100 rounded-md"
-          : ""
-      } ${
-        isSmall ? "md:!text-sm px-5" : "px-3 "
-      } inline text-xs md:text-base xl:text-lg py-1 text-white duration-200 opacity-70 active:opacity-100 hover:opacity-100 text-center`}
-    >
-      {item.title}
-    </a>
+    <li className="2xl:mx-5">
+      <a
+        // target="_blank"
+        href={item.link}
+        rel="noreferrer"
+        className={`${
+          router.pathname.slice(1) === item.link
+            ? "bg-primary-red !opacity-100 rounded-md"
+            : ""
+        } ${
+          isSmall ? "md:!text-sm px-5" : "px-3 "
+        } inline 2xl:text-xl text-xs md:text-base xl:text-lg py-1 text-white duration-200 opacity-70 active:opacity-100 hover:opacity-100 text-center`}
+      >
+        {item.title}
+      </a>
+    </li>
   ) : (
-    <Link
-      href={item.link}
-      className={`${
-        router.pathname.slice(1) === item.link || router.pathname === item.link
-          ? "bg-primary-red !opacity-100 rounded-md"
-          : ""
-      } ${
-        isSmall ? "md:!text-sm px-5" : "px-3 "
-      } inline text-xs md:text-base xl:text-lg py-1 text-white duration-200 opacity-70 active:opacity-100 hover:opacity-100 text-center`}
-    >
-      {item.title}
-    </Link>
+    <li className="mx-5">
+      <Link
+        href={item.link}
+        className={`${
+          router.pathname.slice(1) === item.link ||
+          router.pathname === item.link
+            ? "bg-primary-red !opacity-100 rounded-md"
+            : ""
+        } ${
+          isSmall ? "md:!text-sm px-5" : "px-3 "
+        } inline 2xl:text-xl text-xs md:text-base xl:text-lg py-1 text-white duration-200 opacity-70 active:opacity-100 hover:opacity-100 text-center`}
+      >
+        {item.title}
+      </Link>
+    </li>
   );
 }

@@ -159,6 +159,9 @@ footer .nav-icon {
   max-width: 82.5rem;
   @apply pt-10 md:pt-32 md:pb-40 pb-16 mx-auto space-y-10 md:space-y-[7.5rem];
 }
+.page-container.vr {
+  max-width: 73.125rem !important;
+}
 .page-container.full-width {
   width: 100%;
   max-width: 100%;
@@ -417,7 +420,15 @@ footer .nav-icon {
     width: 90%;
   }
 }
-
+@media (min-width: 1481px) {
+  /* .page-container {
+    max-width: 85rem;
+  } */
+  header .page-container,
+  .page-container.wide {
+    max-width: 102.375rem;
+  }
+}
 .keen-slider {
   overflow-y: visible !important;
 }
