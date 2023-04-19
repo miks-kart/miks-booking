@@ -160,7 +160,11 @@ footer .nav-icon {
   @apply pt-10 md:pt-32 md:pb-40 pb-16 mx-auto space-y-10 md:space-y-[7.5rem];
 }
 .page-container.vr {
-  max-width: 73.125rem !important;
+  max-width: 75rem !important;
+}
+header .page-container,
+.page-container.wide {
+  max-width: 75rem;
 }
 .page-container.full-width {
   width: 100%;
@@ -244,9 +248,9 @@ footer .nav-icon {
 .hover-theme-border-red:hover {
   @apply duration-200 cursor-pointer theme-border-red;
 }
-.page-container.wide {
+/* .page-container.wide {
   max-width: 75rem;
-}
+} */
 /* Calendar */
 [aria-label="calendar"] {
   padding: 0 !important;
