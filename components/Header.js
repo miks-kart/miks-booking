@@ -69,7 +69,7 @@ const Header = forwardRef(function Header({ data }, ref) {
       <div ref={ref} className="fixed top-0 left-0 z-50 w-full">
         <div className="flex items-center justify-center h-6 px-5 bg-primary-red">
           <a
-            target="_blank"
+            // target="_blank"
             href={data.announcement.link}
             rel="noreferrer"
             className="font-sans hover:text-[#363636] duration-200 text-sm text-center text-white underline"
@@ -131,7 +131,7 @@ const Header = forwardRef(function Header({ data }, ref) {
           <div className="w-[31.25rem] px-5 py-[0.1875rem] justify-self-center text-sm bg-primary-red  justify-center items-center rounded-b-[0.9375rem] hidden lg:flex">
             {data.linksTwo.map(({ item }) => (
               <a
-                target="_blank"
+                // target="_blank"
                 key={item.link}
                 href={item.link}
                 rel="noreferrer"
@@ -150,7 +150,7 @@ const Header = forwardRef(function Header({ data }, ref) {
               } duration-200 mr-2 lg:table hidden ml-auto bg-primary-red rounded-b-[0.9375rem] `}
             >
               <a
-                target="_blank"
+                // target="_blank"
                 key={data.booking.link}
                 href={data.booking.link}
                 rel="noreferrer"
