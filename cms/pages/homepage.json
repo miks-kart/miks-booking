@@ -1409,9 +1409,9 @@
           "amountText": "Количество часов",
           "price": "3500",
           "discountFrom": {
-            "from": 2,
-            "discountPrice": 2500,
-            "enabled": "true"
+            "from": "",
+            "discountPrice": "",
+            "enabled": null
           }
         }
       },
