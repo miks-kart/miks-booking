@@ -1620,6 +1620,20 @@
       },
       {
         "item": {
+          "heading": "Персональный шильд",
+          "text": "Персональный шильд с гравировкой имени / лого для кубков и медалей",
+          "amountText": "Количество",
+          "stretch": "true",
+          "price": "200",
+          "discountFrom": {
+            "from": ""
+          },
+          "from": "true",
+          "image": "/images/gray.svg"
+        }
+      },
+      {
+        "item": {
           "heading": "Сертификат",
           "image": "/images/Rectangle 127.jpg",
           "text": "На 1 500 руб.",
@@ -1696,20 +1710,6 @@
           "amountText": "Количество",
           "from": "true",
           "price": "5000"
-        }
-      },
-      {
-        "item": {
-          "heading": "Персональный шильд",
-          "text": "Персональный шильд с гравировкой имени / лого для кубков и медалей",
-          "amountText": "Количество",
-          "stretch": "true",
-          "price": "200",
-          "discountFrom": {
-            "from": ""
-          },
-          "from": "true",
-          "image": "/images/gray.svg"
         }
       }
     ],
