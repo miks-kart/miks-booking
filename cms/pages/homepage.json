@@ -1687,6 +1687,16 @@
           "stretch": "true",
           "price": "4000"
         }
+      },
+      {
+        "item": {
+          "image": "/images/Rectangle 127.jpg",
+          "heading": "Сертификат",
+          "text": "На 6 000 руб.",
+          "amountText": "Количество",
+          "stretch": "true",
+          "price": "6000"
+        }
       }
     ],
     "extras": "дополнительные опции",
