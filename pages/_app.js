@@ -23,11 +23,15 @@ function App({ Component, pageProps }) {
 
   return (
     <ProgressiveImageSupportProvider>
+      <style jsx global>{`
+        :root {
+          --font-rubik: ${rubik.style.fontFamily};
+        }
+      `}</style>
       <main
         style={{
           backgroundColor: pageProps.blueBg ? "#08091E" : "transparent",
         }}
-        className={`${rubik.variable} font-sans`}
       >
         <SmartOutline />
 

@@ -135,7 +135,7 @@ function HourSelector({ data, date, prices, carting }) {
       for (let i = dates[date].time[0]; i < dates[date].time[1]; i += 0.5) {
         if (
           (dayOfWeek === 5 && i >= 18) ||
-          dayOfWeek > 5 ||
+          dayOfWeek > (carting ? 5 : 4) ||
           JSON.stringify(holidays).includes(
             JSON.stringify({
               day: dates[date].date.day,

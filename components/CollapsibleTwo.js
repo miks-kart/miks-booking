@@ -5,7 +5,7 @@ import SummaryTwo from "./SummaryTwo";
 import { useStore } from "./Store";
 import ImageSimple from "./image/ImageSimple";
 
-function ResetButton({ data, dataNum, desktop }) {
+function ResetButton({ data, dataNum }) {
   const resetDateTime = useStore((state) => state.resetDateTime);
   const changeTotal = useStore((state) => state.changeTotal);
   return (
@@ -14,9 +14,7 @@ function ResetButton({ data, dataNum, desktop }) {
         resetDateTime(dataNum);
         changeTotal(0, dataNum);
       }}
-      className={`${
-        desktop ? "hidden lg:block py-[0.625rem]" : "lg:hidden text-left !pt-5"
-      } text-sm duration-300 hover:opacity-70 font-medium text-primary-red`}
+      className={`text-sm duration-300 text-left pt-5 hover:opacity-70 font-medium text-primary-red`}
     >
       {data.smallTexts.reset}
     </button>
@@ -46,7 +44,7 @@ export default function CollapsibleTwo({ data, headerHeight, conf }) {
           <p className="pb-4 text-xl uppercase lg:pb-0 md:text-2xl">
             {data.collapsibleTwo.dateAndTime}
           </p>
-          <ResetButton desktop dataNum="dateTwo" data={data} />
+          {/* <ResetButton desktop dataNum="dateTwo" data={data} /> */}
 
           <div
             className="theme-text !leading-[1.35] markdown-text space-y-2"
