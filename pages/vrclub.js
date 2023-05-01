@@ -205,12 +205,12 @@ export default function Index({ data }) {
           </div>
 
           <div className="md:hidden">
-            <p className="px-4 text-[#7CCDFA] py-2 mt-auto font-bold !leading-tight  whitespace-pre-line">
-              {data.colOne.items[0]}
+            <p className="px-4 text-[#7CCDFA] py-2 mt-auto font-bold !leading-tight  ">
+              {data.colTwo.heading}
             </p>
             <div className="border-l-[0.0625rem] !leading-tight border-[#5FCFFF]">
               <div className="flex items-center justify-between py-2 ">
-                <p className="pl-4 pr-6 font-medium">{data.colTwo.heading}</p>
+                <p className="pl-4 pr-6 font-medium">{data.colOne.items[0]}</p>
                 <p
                   style={{ boxShadow: "0px 0px 15px 0px #5FCFFF" }}
                   className="px-4 py-2  my-auto text-lg leading-tight text-center text-[#0F1138] rounded-lg bg-white font-bold"
@@ -219,21 +219,21 @@ export default function Index({ data }) {
                 </p>
               </div>
               <div className="flex items-center justify-between py-2 ">
-                <p className="pl-4 pr-6 font-medium">{data.colThree.heading}</p>
+                <p className="pl-4 pr-6 font-medium">{data.colOne.items[1]}</p>
                 <p
                   style={{ boxShadow: "0px 0px 15px 0px #5FCFFF" }}
                   className="px-4 py-2  my-auto text-lg leading-tight text-center text-[#0F1138] rounded-lg bg-white font-bold"
                 >
-                  {data.colThree.items[0]}
+                  {data.colTwo.items[1]}
                 </p>
               </div>
               <div className="flex items-center justify-between py-2 ">
-                <p className="pl-4 pr-6 font-medium">{data.colFour.heading}</p>
+                <p className="pl-4 pr-6 font-medium">{data.colOne.items[2]}</p>
                 <p
                   style={{ boxShadow: "0px 0px 15px 0px #5FCFFF" }}
                   className="px-4 py-2  my-auto text-lg leading-tight text-center text-[#0F1138] rounded-lg bg-white font-bold"
                 >
-                  {data.colFour.items[0]}
+                  {data.colTwo.items[2]}
                 </p>
               </div>
               <a
@@ -246,21 +246,21 @@ export default function Index({ data }) {
           </div>
 
           <div className="pt-2 md:hidden">
-            <p className="px-4 text-[#7CCDFA] py-2 mt-auto font-bold !leading-tight  whitespace-pre-line">
-              {data.colOne.items[1]}
+            <p className="px-4 text-[#7CCDFA] py-2 mt-auto font-bold !leading-tight">
+              {data.colThree.heading}
             </p>
             <div className="border-l-[0.0625rem] !leading-tight border-[#5FCFFF]">
               <div className="flex items-center justify-between py-2 ">
-                <p className="pl-4 pr-6 font-medium">{data.colTwo.heading}</p>
+                <p className="pl-4 pr-6 font-medium">{data.colOne.items[0]}</p>
                 <p
                   style={{ boxShadow: "0px 0px 15px 0px #5FCFFF" }}
                   className="px-4 py-2  my-auto text-lg leading-tight text-center text-[#0F1138] rounded-lg bg-white font-bold"
                 >
-                  {data.colTwo.items[1]}
+                  {data.colThree.items[0]}
                 </p>
               </div>
               <div className="flex items-center justify-between py-2 ">
-                <p className="pl-4 pr-6 font-medium">{data.colThree.heading}</p>
+                <p className="pl-4 pr-6 font-medium">{data.colOne.items[1]}</p>
                 <p
                   style={{ boxShadow: "0px 0px 15px 0px #5FCFFF" }}
                   className="px-4 py-2  my-auto text-lg leading-tight text-center text-[#0F1138] rounded-lg bg-white font-bold"
@@ -269,12 +269,12 @@ export default function Index({ data }) {
                 </p>
               </div>
               <div className="flex items-center justify-between py-2 ">
-                <p className="pl-4 pr-6 font-medium">{data.colFour.heading}</p>
+                <p className="pl-4 pr-6 font-medium">{data.colOne.items[2]}</p>
                 <p
                   style={{ boxShadow: "0px 0px 15px 0px #5FCFFF" }}
                   className="px-4 py-2  my-auto text-lg leading-tight text-center text-[#0F1138] rounded-lg bg-white font-bold"
                 >
-                  {data.colFour.items[1]}
+                  {data.colThree.items[2]}
                 </p>
               </div>
               <a
@@ -287,30 +287,30 @@ export default function Index({ data }) {
           </div>
 
           <div className="pt-2 md:hidden">
-            <p className="px-4 text-[#7CCDFA] py-2 mt-auto font-bold !leading-tight  whitespace-pre-line">
-              {data.colOne.items[2]}
+            <p className="px-4 text-[#7CCDFA] py-2 mt-auto font-bold !leading-tight">
+              {data.colFour.heading}
             </p>
             <div className="border-l-[0.0625rem] !leading-tight border-[#5FCFFF]">
               <div className="flex items-center justify-between py-2 ">
-                <p className="pl-4 pr-6 font-medium">{data.colTwo.heading}</p>
+                <p className="pl-4 pr-6 font-medium">{data.colOne.items[0]}</p>
                 <p
                   style={{ boxShadow: "0px 0px 15px 0px #5FCFFF" }}
                   className="px-4 py-2  my-auto text-lg leading-tight text-center text-[#0F1138] rounded-lg bg-white font-bold"
                 >
-                  {data.colTwo.items[2]}
+                  {data.colFour.items[0]}
                 </p>
               </div>
               <div className="flex items-center justify-between py-2 ">
-                <p className="pl-4 pr-6 font-medium">{data.colThree.heading}</p>
+                <p className="pl-4 pr-6 font-medium">{data.colOne.items[1]}</p>
                 <p
                   style={{ boxShadow: "0px 0px 15px 0px #5FCFFF" }}
                   className="px-4 py-2  my-auto text-lg leading-tight text-center text-[#0F1138] rounded-lg bg-white font-bold"
                 >
-                  {data.colThree.items[2]}
+                  {data.colFour.items[1]}
                 </p>
               </div>
               <div className="flex items-center justify-between py-2 ">
-                <p className="pl-4 pr-6 font-medium">{data.colFour.heading}</p>
+                <p className="pl-4 pr-6 font-medium">{data.colOne.items[2]}</p>
                 <p
                   style={{ boxShadow: "0px 0px 15px 0px #5FCFFF" }}
                   className="px-4 py-2  my-auto text-lg leading-tight text-center text-[#0F1138] rounded-lg bg-white font-bold"
