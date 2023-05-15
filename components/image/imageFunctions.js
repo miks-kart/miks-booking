@@ -13,6 +13,30 @@ const AVIF_QUALITY = { quality: 56, chromaSubsampling: "4:2:0" };
 
 const sizes = [320, 640, 960, 1200, 1440, 2000];
 
+const OPTIMIZED_FILENAME = "optimizedList.json";
+
+function isImageOptimized(input) {
+  let data = {};
+
+  try {
+    data = JSON.parse(fs.readFileSync(OPTIMIZED_FILENAME));
+  } catch (err) {
+    if (err.code === "ENOENT") {
+      data.optimized = [];
+    } else {
+      throw err;
+    }
+  }
+
+  if (!data.optimized.includes(input)) {
+    data.optimized.push(input);
+    fs.writeFileSync(OPTIMIZED_FILENAME, JSON.stringify(data, null, 2));
+    return false;
+  } else {
+    return true;
+  }
+}
+
 const convertImageToBase64 = (image) => {
   return fs.readFileSync(`${process.cwd()}${image}`, "base64");
 };
@@ -134,6 +158,8 @@ export async function getFluidImage(
     return image;
   }
 
+  const wasOptimized = isImageOptimized(image);
+
   const imageName = image.split("images").pop();
   image = "/public" + image;
   const imageFolder = "/public/images";
@@ -167,22 +193,26 @@ export async function getFluidImage(
       }
     }
 
-    await Promise.all(
-      results.map((width) =>
-        resizeImage(
-          imageName,
-          imageFolder,
-          processedImagePath,
-          width,
-          dimensions
+    if (!wasOptimized) {
+      await Promise.all(
+        results.map((width) =>
+          resizeImage(
+            imageName,
+            imageFolder,
+            processedImagePath,
+            width,
+            dimensions
+          )
         )
-      )
-    );
+      );
+    }
 
     if (avif) {
-      await Promise.all(
-        results.map((width) => convertToAvif(imageName, width))
-      );
+      if (!wasOptimized) {
+        await Promise.all(
+          results.map((width) => convertToAvif(imageName, width))
+        );
+      }
       formats.push({
         srcSet: results
           .map(
@@ -196,9 +226,11 @@ export async function getFluidImage(
       });
     }
     if (webp) {
-      await Promise.all(
-        results.map((width) => convertToWebp(imageName, width))
-      );
+      if (!wasOptimized) {
+        await Promise.all(
+          results.map((width) => convertToWebp(imageName, width))
+        );
+      }
       formats.push({
         srcSet: results
           .map(
@@ -225,7 +257,7 @@ export async function getFluidImage(
   imageObj.src =
     dimensions.width >= 2000
       ? `/optimised/${2000}${imageName}`
-      : "/images/" + imageName;
+      : "/images" + imageName;
   return { ...imageObj, formats };
 }
 
@@ -288,6 +320,8 @@ export async function getOptimizedImage(image) {
     return image;
   }
 
+  const wasOptimized = isImageOptimized(image);
+
   const imageName = image.split("images").pop();
   image = "/public" + image;
   const imageFolder = "/public/images";
@@ -312,20 +346,22 @@ export async function getOptimizedImage(image) {
         results.push(dimensions.width);
       }
     }
-
-    await Promise.all(
-      results.map((width) =>
-        resizeImage(
-          imageName,
-          imageFolder,
-          processedImagePath,
-          width,
-          dimensions
+    if (!wasOptimized) {
+      await Promise.all(
+        results.map((width) =>
+          resizeImage(
+            imageName,
+            imageFolder,
+            processedImagePath,
+            width,
+            dimensions
+          )
         )
-      )
-    );
-
-    await Promise.all(results.map((width) => convertToWebp(imageName, width)));
+      );
+      await Promise.all(
+        results.map((width) => convertToWebp(imageName, width))
+      );
+    }
 
     imageObj.srcSetWebp = results
       .map(
@@ -348,6 +384,6 @@ export async function getOptimizedImage(image) {
   imageObj.src =
     dimensions.width >= 2000
       ? `/optimised/${2000}${imageName}`
-      : "/images/" + imageName;
+      : "/images" + imageName;
   return imageObj;
 }

@@ -14,10 +14,12 @@
   }
 }
 
-* {
+html {
+  text-rendering: geometricprecision;
+  -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: greyscale;
-  text-rendering: optimizeLegibility;
+  -moz-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @font-face {

@@ -82,7 +82,8 @@ const ImageBlur = forwardRef(
       if (
         imgResources.length > 0 &&
         (imgResources[0].decodedBodySize === 0 ||
-          imgResources[0].duration <= 70) &&
+          imgResources[0].duration <= 70 ||
+          imgResources[0].transferSize <= 1000) &&
         wasLoaded.current === false
       ) {
         wasLoaded.current = true;

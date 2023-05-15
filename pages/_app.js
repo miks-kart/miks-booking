@@ -7,7 +7,7 @@ import "../styles/style.css";
 import { Rubik } from "next/font/google";
 import { useRef } from "react";
 import useSize from "@react-hook/size";
-import { ProgressiveImageSupportProvider } from "@components/ProgressiveImageSupportContext";
+import { ProgressiveImageSupportProvider } from "@components/image/ProgressiveImageSupportContext";
 
 const rubik = Rubik({
   variable: "--font-rubik",

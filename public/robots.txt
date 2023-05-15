@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://miks-booking.ru
+
+# Sitemaps
+Sitemap: https://miks-booking.ru/sitemap.xml

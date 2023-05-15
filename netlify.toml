@@ -2,5 +2,13 @@
   command = "npm run build"
   publish = ".next"
 
+[[headers]]
+  for = "*.(png|jpg|jpeg|gif|webp|avif)$"
+  [headers.values]
+  cache-control = '''
+  public, 
+  max-age=31536000,
+  immutable'''
+
 [[plugins]]
   package = "@netlify/plugin-nextjs"
