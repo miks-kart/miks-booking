@@ -5,6 +5,7 @@ import makeDir from "make-dir";
 import { promisify } from "util";
 import { join } from "path";
 const sizeOf = promisify(require("image-size"));
+const lockfile = require("proper-lockfile");
 
 const JPEG_QUALITY = { quality: 75, mozjpeg: true };
 const PNG_QUALITY = { quality: 75 };
@@ -15,25 +16,51 @@ const sizes = [320, 640, 960, 1200, 1440, 2000];
 
 const OPTIMIZED_FILENAME = "optimizedList.json";
 
-function isImageOptimized(input) {
-  let data = {};
+const readFileAsync = promisify(fs.readFile);
+const writeFileAsync = promisify(fs.writeFile);
+const accessAsync = promisify(fs.access);
 
+async function ensureFileExists(filePath) {
   try {
-    data = JSON.parse(fs.readFileSync(OPTIMIZED_FILENAME));
+    // Try to access file
+    await accessAsync(filePath, fs.constants.F_OK);
   } catch (err) {
-    if (err.code === "ENOENT") {
-      data.optimized = [];
-    } else {
-      throw err;
-    }
+    // If file does not exist, create it
+    await writeFileAsync(filePath, `{ "optimized": [] }`, "utf8");
   }
+}
 
-  if (!data.optimized.includes(input)) {
-    data.optimized.push(input);
-    fs.writeFileSync(OPTIMIZED_FILENAME, JSON.stringify(data, null, 2));
-    return false;
-  } else {
-    return true;
+async function isImageOptimized(value) {
+  await ensureFileExists(OPTIMIZED_FILENAME);
+  let release;
+  try {
+    release = await lockfile.lock(OPTIMIZED_FILENAME, {
+      // Retry options
+      retries: {
+        retries: 5, // Retry 5 times
+        factor: 3, // Exponential backoff factor
+        minTimeout: 1 * 1000, // The number of milliseconds before starting the first retry
+        maxTimeout: 60 * 1000, // The maximum number of milliseconds between two retries
+        randomize: true, // Randomizes the timeouts by multiplying with a factor between 1 to 2
+      },
+    });
+    const data = await readFileAsync(OPTIMIZED_FILENAME, "utf8");
+    const json = JSON.parse(data);
+
+    if (!Array.isArray(json.optimized)) {
+      throw new Error("JSON data is not an array");
+    }
+
+    if (!json.optimized.includes(value)) {
+      json.optimized.push(value);
+      await writeFileAsync(OPTIMIZED_FILENAME, JSON.stringify(json), "utf8");
+    }
+  } catch (err) {
+    console.error(err);
+  } finally {
+    if (release) {
+      await release();
+    }
   }
 }
 
@@ -158,7 +185,7 @@ export async function getFluidImage(
     return image;
   }
 
-  const wasOptimized = isImageOptimized(image);
+  const wasOptimized = await isImageOptimized(image);
 
   const imageName = image.split("images").pop();
   image = "/public" + image;
@@ -320,7 +347,7 @@ export async function getOptimizedImage(image) {
     return image;
   }
 
-  const wasOptimized = isImageOptimized(image);
+  const wasOptimized = await isImageOptimized(image);
 
   const imageName = image.split("images").pop();
   image = "/public" + image;

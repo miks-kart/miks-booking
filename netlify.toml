@@ -3,7 +3,7 @@
   publish = ".next"
 
 [[headers]]
-  for = "*.(png|jpg|jpeg|gif|webp|avif)$"
+  for = "*.(png|jpg|jpeg|gif|webp|avif|mp4)$"
   [headers.values]
   cache-control = '''
   public, 
