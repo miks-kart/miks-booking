@@ -5,7 +5,6 @@ import makeDir from "make-dir";
 import { promisify } from "util";
 import { join } from "path";
 const sizeOf = promisify(require("image-size"));
-const lockfile = require("proper-lockfile");
 
 const JPEG_QUALITY = { quality: 75, mozjpeg: true };
 const PNG_QUALITY = { quality: 75 };
@@ -14,53 +13,14 @@ const AVIF_QUALITY = { quality: 56, chromaSubsampling: "4:2:0" };
 
 const sizes = [320, 640, 960, 1200, 1440, 2000];
 
-const OPTIMIZED_FILENAME = "optimizedList.json";
-
-const readFileAsync = promisify(fs.readFile);
-const writeFileAsync = promisify(fs.writeFile);
 const accessAsync = promisify(fs.access);
 
-async function ensureFileExists(filePath) {
+async function checkFileExists(path) {
   try {
-    // Try to access file
-    await accessAsync(filePath, fs.constants.F_OK);
-  } catch (err) {
-    // If file does not exist, create it
-    await writeFileAsync(filePath, `{ "optimized": [] }`, "utf8");
-  }
-}
-
-async function isImageOptimized(value) {
-  await ensureFileExists(OPTIMIZED_FILENAME);
-  let release;
-  try {
-    release = await lockfile.lock(OPTIMIZED_FILENAME, {
-      // Retry options
-      retries: {
-        retries: 5, // Retry 5 times
-        factor: 3, // Exponential backoff factor
-        minTimeout: 1 * 1000, // The number of milliseconds before starting the first retry
-        maxTimeout: 60 * 1000, // The maximum number of milliseconds between two retries
-        randomize: true, // Randomizes the timeouts by multiplying with a factor between 1 to 2
-      },
-    });
-    const data = await readFileAsync(OPTIMIZED_FILENAME, "utf8");
-    const json = JSON.parse(data);
-
-    if (!Array.isArray(json.optimized)) {
-      throw new Error("JSON data is not an array");
-    }
-
-    if (!json.optimized.includes(value)) {
-      json.optimized.push(value);
-      await writeFileAsync(OPTIMIZED_FILENAME, JSON.stringify(json), "utf8");
-    }
-  } catch (err) {
-    console.error(err);
-  } finally {
-    if (release) {
-      await release();
-    }
+    await accessAsync(path);
+    return true;
+  } catch {
+    return false;
   }
 }
 
@@ -85,22 +45,24 @@ const resizeImage = async (
 ) => {
   await makeDirectory(process.cwd() + "/public/optimised/" + width);
   const path = `${process.cwd()}/public/optimised/${width}${image}`;
-  if (dimensions.type === "jpg") {
-    await sharp(`${process.cwd()}${imageFolder}/${image}`)
-      .resize({ width: width })
-      .jpeg(JPEG_QUALITY)
-      .toFile(path)
-      .catch((err) => {
-        console.log("jpg ", err, image);
-      });
-  } else {
-    await sharp(`${process.cwd()}${imageFolder}/${image}`)
-      .resize({ width: width })
-      .png(PNG_QUALITY)
-      .toFile(path)
-      .catch((err) => {
-        console.log("png ", err, image);
-      });
+  if (!(await checkFileExists(path))) {
+    if (dimensions.type === "jpg") {
+      await sharp(`${process.cwd()}${imageFolder}/${image}`)
+        .resize({ width: width })
+        .jpeg(JPEG_QUALITY)
+        .toFile(path)
+        .catch((err) => {
+          console.log("jpg ", err, image);
+        });
+    } else {
+      await sharp(`${process.cwd()}${imageFolder}/${image}`)
+        .resize({ width: width })
+        .png(PNG_QUALITY)
+        .toFile(path)
+        .catch((err) => {
+          console.log("png ", err, image);
+        });
+    }
   }
   return `${processedImagePath}/${width}${image}`;
 };
@@ -116,13 +78,15 @@ const convertToAvif = async (image, width) => {
   );
 
   const img = join(process.cwd(), "public", "images", image);
-  await sharp(img)
-    .resize({ width: width })
-    .avif(AVIF_QUALITY)
-    .toFile(path)
-    .catch((err) => {
-      console.log("avif", err, image);
-    });
+  if (!(await checkFileExists(path))) {
+    await sharp(img)
+      .resize({ width: width })
+      .avif(AVIF_QUALITY)
+      .toFile(path)
+      .catch((err) => {
+        console.log("avif", err, image);
+      });
+  }
 };
 
 const convertToWebp = async (image, width) => {
@@ -134,13 +98,15 @@ const convertToWebp = async (image, width) => {
     `${width}${image.replace(/\.[^/.]+$/, ".webp")}`
   );
   const img = join(process.cwd(), "public", "images", image);
-  await sharp(img)
-    .resize({ width: width })
-    .webp(WEBP_QUALITY)
-    .toFile(path)
-    .catch((err) => {
-      console.log("webp ", err, image);
-    });
+  if (!(await checkFileExists(path))) {
+    await sharp(img)
+      .resize({ width: width })
+      .webp(WEBP_QUALITY)
+      .toFile(path)
+      .catch((err) => {
+        console.log("webp ", err, image);
+      });
+  }
 };
 
 const getImageAspectRatio = (image) => {
@@ -185,8 +151,6 @@ export async function getFluidImage(
     return image;
   }
 
-  const wasOptimized = await isImageOptimized(image);
-
   const imageName = image.split("images").pop();
   image = "/public" + image;
   const imageFolder = "/public/images";
@@ -220,26 +184,23 @@ export async function getFluidImage(
       }
     }
 
-    if (!wasOptimized) {
-      await Promise.all(
-        results.map((width) =>
-          resizeImage(
-            imageName,
-            imageFolder,
-            processedImagePath,
-            width,
-            dimensions
-          )
+    await Promise.all(
+      results.map((width) =>
+        resizeImage(
+          imageName,
+          imageFolder,
+          processedImagePath,
+          width,
+          dimensions
         )
-      );
-    }
+      )
+    );
 
     if (avif) {
-      if (!wasOptimized) {
-        await Promise.all(
-          results.map((width) => convertToAvif(imageName, width))
-        );
-      }
+      await Promise.all(
+        results.map((width) => convertToAvif(imageName, width))
+      );
+
       formats.push({
         srcSet: results
           .map(
@@ -253,11 +214,9 @@ export async function getFluidImage(
       });
     }
     if (webp) {
-      if (!wasOptimized) {
-        await Promise.all(
-          results.map((width) => convertToWebp(imageName, width))
-        );
-      }
+      await Promise.all(
+        results.map((width) => convertToWebp(imageName, width))
+      );
       formats.push({
         srcSet: results
           .map(
@@ -347,8 +306,6 @@ export async function getOptimizedImage(image) {
     return image;
   }
 
-  const wasOptimized = await isImageOptimized(image);
-
   const imageName = image.split("images").pop();
   image = "/public" + image;
   const imageFolder = "/public/images";
@@ -373,22 +330,18 @@ export async function getOptimizedImage(image) {
         results.push(dimensions.width);
       }
     }
-    if (!wasOptimized) {
-      await Promise.all(
-        results.map((width) =>
-          resizeImage(
-            imageName,
-            imageFolder,
-            processedImagePath,
-            width,
-            dimensions
-          )
+    await Promise.all(
+      results.map((width) =>
+        resizeImage(
+          imageName,
+          imageFolder,
+          processedImagePath,
+          width,
+          dimensions
         )
-      );
-      await Promise.all(
-        results.map((width) => convertToWebp(imageName, width))
-      );
-    }
+      )
+    );
+    await Promise.all(results.map((width) => convertToWebp(imageName, width)));
 
     imageObj.srcSetWebp = results
       .map(
