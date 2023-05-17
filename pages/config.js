@@ -3,10 +3,7 @@ import CollapsibleThree from "@components/CollapsibleThree";
 import markdownToHtml from "../lib/markdownToHtml";
 import Checkout from "@components/Checkout";
 import CollapsibleTwo from "@components/CollapsibleTwo";
-import {
-  getFluidImage,
-  getOptimizedImage,
-} from "@components/image/imageFunctions";
+import { getFluidImage } from "@components/image/imageFunctions";
 import { useEffect, useState } from "react";
 import keccak256 from "keccak256";
 
@@ -167,12 +164,8 @@ export async function getStaticProps() {
 
   data.collapsibleOne.prices = await markdownToHtml(data.collapsibleOne.prices);
   data.collapsibleTwo.prices = await markdownToHtml(data.collapsibleTwo.prices);
-  data.collapsibleOne.image = await getOptimizedImage(
-    data.collapsibleOne.image
-  );
-  data.collapsibleTwo.image = await getOptimizedImage(
-    data.collapsibleTwo.image
-  );
+  data.collapsibleOne.image = await getFluidImage(data.collapsibleOne.image);
+  data.collapsibleTwo.image = await getFluidImage(data.collapsibleTwo.image);
   if (data.collapsibleOne.items[0].item?.text) {
     data.collapsibleOne.items = await Promise.all(
       data.collapsibleOne.items.map(async ({ item }) => {

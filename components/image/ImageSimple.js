@@ -1,5 +1,5 @@
 import { ProgressiveImageSupportContext } from "@components/image/ProgressiveImageSupportContext";
-import { useContext } from "react";
+import { useContext, useMemo } from "react";
 import Preload from "./Preload";
 
 export default function ImageSimple({
@@ -15,23 +15,29 @@ export default function ImageSimple({
     ProgressiveImageSupportContext
   );
 
-  function getSrcSet() {
-    if (src.formats?.length === 0) {
+  let srcSet = useMemo(() => {
+    if (!src.formats || src.formats.length === 0) {
       return undefined;
-    } else if (ProgressiveImageSupport.webp) {
-      return src.formats
-        ? src.formats.find((item) => item.format === "image/webp").srcSet
-        : src.srcSetWebp;
-    } else {
-      return src.formats
-        ? src.formats.find(
-            (item) =>
-              item.format === "image/jpeg" || item.format === "image/png"
-          ).srcSet
-        : src.srcSetOriginal;
     }
-  }
-  const srcSet = getSrcSet();
+
+    const avifSrcSet = src.formats.find(
+      (item) => item.format === "image/avif"
+    )?.srcSet;
+    const webpSrcSet = src.formats.find(
+      (item) => item.format === "image/webp"
+    )?.srcSet;
+    const oldSrcSet = src.formats.find(
+      (item) => item.format !== "image/avif" && item.format !== "image/webp"
+    )?.srcSet;
+
+    if (ProgressiveImageSupport.avif && avifSrcSet) {
+      return avifSrcSet;
+    } else if (ProgressiveImageSupport.webp && webpSrcSet) {
+      return webpSrcSet;
+    } else {
+      return oldSrcSet;
+    }
+  }, [ProgressiveImageSupport, src]);
 
   return (
     <>

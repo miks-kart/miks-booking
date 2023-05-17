@@ -7,26 +7,29 @@ export default function Preload({ src, sizes = "100vw" }) {
     ProgressiveImageSupportContext
   );
 
-  const webpFormat = src.formats?.find((item) => item.format === "image/webp");
-  const avifFormat = src.formats?.find((item) => item.format === "image/avif");
-
-  let imageSrcSet = useMemo(() => {
-    if (src.dimensions?.type === "svg") {
+  let srcSet = useMemo(() => {
+    if (!src.formats || src.formats.length === 0) {
       return undefined;
-    } else if (ProgressiveImageSupport.avif && avifFormat) {
-      return avifFormat.srcSet;
-    } else if (ProgressiveImageSupport.webp && webpFormat) {
-      return webpFormat.srcSet;
-    } else if (ProgressiveImageSupport.webp && src.srcSetWebp) {
-      return src.srcSetWebp;
-    } else if (src.srcSetOriginal) {
-      return src.srcSetOriginal;
-    } else if (src.formats && src.formats[0].srcSet) {
-      return src.formats.filter(
-        (item) => item.format !== "image/avif" && item.format !== "image/webp"
-      )[0].srcSet;
     }
-  }, [ProgressiveImageSupport]);
+
+    const avifSrcSet = src.formats.find(
+      (item) => item.format === "image/avif"
+    )?.srcSet;
+    const webpSrcSet = src.formats.find(
+      (item) => item.format === "image/webp"
+    )?.srcSet;
+    const oldSrcSet = src.formats.find(
+      (item) => item.format !== "image/avif" && item.format !== "image/webp"
+    )?.srcSet;
+
+    if (ProgressiveImageSupport.avif && avifSrcSet) {
+      return avifSrcSet;
+    } else if (ProgressiveImageSupport.webp && webpSrcSet) {
+      return webpSrcSet;
+    } else {
+      return oldSrcSet;
+    }
+  }, [ProgressiveImageSupport, src]);
 
   return (
     <Head>
@@ -34,8 +37,8 @@ export default function Preload({ src, sizes = "100vw" }) {
         key={JSON.stringify(src)}
         as="image"
         rel="preload"
-        imageSrcSet={imageSrcSet}
-        href={imageSrcSet ? undefined : src.src}
+        imageSrcSet={srcSet}
+        href={srcSet ? undefined : src.src}
         imageSizes={sizes}
       />
     </Head>

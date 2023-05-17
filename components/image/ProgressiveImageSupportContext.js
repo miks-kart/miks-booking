@@ -1,6 +1,9 @@
 import { createContext, useEffect, useState } from "react";
 
-export const ProgressiveImageSupportContext = createContext();
+export const ProgressiveImageSupportContext = createContext({
+  ProgressiveImageSupport: { webp: true, avif: true },
+  setProgressiveImageSupport: () => {},
+});
 
 export function ProgressiveImageSupportProvider(props) {
   useEffect(() => {
