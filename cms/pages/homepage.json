@@ -1716,8 +1716,8 @@
     ],
     "extras": "дополнительные опции",
     "price": {
-      "mondayToFriday": "22000",
-      "mondayToThursday": "33000",
+      "mondayToFriday": "24200",
+      "mondayToThursday": "35200",
       "fridayToSunday": "44000",
       "minTime": "0.5",
       "workUntil": 24
