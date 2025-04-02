@@ -15,7 +15,7 @@ export default async function handler(req, res) {
 
   const mailData = {
     from: '"MIKS KARTING" noreply.miks@gmail.com',
-    to: ["info@miks-karting.ru", "victor@miks-karting.ru"],
+    to: ["info@miks-karting.ru", "victor@miks-karting.ru", "sergei@miks-karting.ru"],
     subject: `Потверждение заказа`,
     text: `Заказ для ${req.body.name} подтвержден. Финальная смета находится в приложении к этому письму.`,
     html: `<p>Заказ для ${req.body.name} подтвержден. Финальная смета находится в приложении к этому письму.</p>`,
