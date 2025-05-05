@@ -59,7 +59,7 @@
   "collapsibleThree": {
     "breadTitle": "Пицца и хлеб",
     "fishTitle": "Горячие блюда из рыбы",
-    "beerBottleTitle": "Пиво бутылочное",
+    "beerBottleTitle": "Пиво ",
     "desertTitle": "Десерт",
     "snacks": [
       {
@@ -174,7 +174,7 @@
     "barTitle": "Барные закуски",
     "menuSubitle": "заказ от 10 шт.",
     "saladsTitle": "салаты и холодные закуски",
-    "beerTitle": "Пиво разливное",
+    "beerTitle": "Пиво без алкогольное",
     "teaTitle": "Чай, кофе",
     "pastaTitle": "паста",
     "meat": [
@@ -344,20 +344,11 @@
     "beer": [
       {
         "item": {
-          "image": "/images/Rectangle 4372.jpg",
-          "heading": "Stella Artois\nCветлый лагер",
-          "text": "0,5 л.",
+          "image": "/images/whatsapp-image-2025-04-29-at-10.17.34.jpeg",
+          "heading": "RUN FORREST ",
+          "text": "0,33 л.",
           "amountText": "Количество",
-          "price": "350"
-        }
-      },
-      {
-        "item": {
-          "image": "/images/Rectangle 425.jpg",
-          "heading": "Stella Artois\nCветлый лагер",
-          "text": "0.3 л.",
-          "amountText": "Количество",
-          "price": "300"
+          "price": "320"
         }
       }
     ],
@@ -743,29 +734,38 @@
     "beerBottle": [
       {
         "item": {
-          "image": "/images/Rectangle 433.jpg",
-          "heading": "Abbe Blonde темный эль",
+          "image": "/images/whatsapp-image-2025-04-29-at-10.17.35-2-.jpeg",
+          "heading": "VARKA BLANCHE",
           "text": "0﻿,45 л.",
           "amountText": "Количество",
-          "price": "370"
+          "price": "380"
         }
       },
       {
         "item": {
-          "image": "/images/Rectangle 434.jpg",
-          "heading": "Hoegaarden Нефильтрованное",
+          "image": "/images/whatsapp-image-2025-04-29-at-10.17.35-1-.jpeg",
+          "heading": "VARKA PREMIUM LAGER",
           "text": "0.45 л.",
           "amountText": "Количество",
-          "price": "400"
+          "price": "380"
         }
       },
       {
         "item": {
-          "image": "/images/Rectangle 427.jpg",
-          "heading": "Бад без алкогольное",
-          "text": "0.33 л.",
+          "image": "/images/whatsapp-image-2025-04-29-at-10.17.35.jpeg",
+          "heading": "VARKA CHERRY ALE",
+          "text": "0.45 л.",
           "amountText": "Количество",
-          "price": "250"
+          "price": "420"
+        }
+      },
+      {
+        "item": {
+          "image": "/images/whatsapp-image-2025-04-29-at-10.17.36.jpeg",
+          "heading": "GRANT WOOD",
+          "text": "0﻿,45 л.",
+          "amountText": "Количество",
+          "price": "420"
         }
       }
     ],
