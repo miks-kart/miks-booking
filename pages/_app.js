@@ -13,12 +13,12 @@ import Script from "next/script";
 const rubik = localFont({
   src: [
     {
-      path: "../Rubik-VariableFont_wght.ttf",
+      path: "../public/Rubik-VariableFont_wght.ttf",
       style: "normal",
       weight: "300 900",
     },
     {
-      path: "../Rubik-Italic-VariableFont_wght.ttf",
+      path: "../public/Rubik-Italic-VariableFont_wght.ttf",
       style: "italic",
       weight: "300 900",
     },
