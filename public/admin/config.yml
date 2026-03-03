@@ -1,8 +1,9 @@
 backend:
-  name: git-gateway
-  # name: github
-  repo: vradionovskii/miks-conf
+  name: github
+  repo: miks-kart/miks-booking
   branch: main
+  base_url: https://admin.miks-kart.ru
+  auth_endpoint: /auth
 media_folder: public/images
 public_folder: /images
 locale: ru
