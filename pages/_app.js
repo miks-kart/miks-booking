@@ -4,16 +4,26 @@ import HeaderPlaceholderSmall from "@components/HeaderPlaceholderSmall";
 import HeaderPlaceholder from "@components/HeaderPlaceholder";
 import SEO from "@components/seo";
 import "../styles/style.css";
-import { Rubik } from "next/font/google";
+import localFont from "next/font/local";
 import { useRef } from "react";
 import useSize from "@react-hook/size";
 import { ProgressiveImageSupportProvider } from "@components/image/ProgressiveImageSupportContext";
 import Script from "next/script";
 
-const rubik = Rubik({
+const rubik = localFont({
+  src: [
+    {
+      path: "../Rubik-VariableFont_wght.ttf",
+      style: "normal",
+      weight: "300 900",
+    },
+    {
+      path: "../Rubik-Italic-VariableFont_wght.ttf",
+      style: "italic",
+      weight: "300 900",
+    },
+  ],
   variable: "--font-rubik",
-  subsets: ["latin", "cyrillic-ext"],
-  weight: ["400", "500", "600", "700"],
 });
 
 function App({ Component, pageProps }) {
